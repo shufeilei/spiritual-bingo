@@ -6,4 +6,8 @@ class User < ApplicationRecord
 
   has_one :board
   belongs_to :team
+
+  def score
+    board ? board.score : 0
+  end
 end
