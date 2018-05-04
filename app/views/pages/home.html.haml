@@ -1,20 +1,3 @@
-/ Navigation
-%nav#mainNav.navbar.navbar-expand-lg.navbar-light.fixed-top.bg-secondary.text-uppercase
-  .container
-    =link_to '#page-top', class: 'navbar-brand js-scroll-trigger' do
-      = image_tag 'favicon.ico', width: '30px'
-      IUSM
-    %button.navbar-toggler.navbar-toggler-right{"aria-controls" => "navbarResponsive", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbarResponsive", "data-toggle" => "collapse", type: "button"}
-      Menu
-      %i.fa.fa-bars
-    #navbarResponsive.collapse.navbar-collapse
-      %ul.navbar-nav.ml-auto
-        %li.nav-item
-          = link_to 'Photos', 'https://igsm.smugmug.com/2018', class: 'nav-link rounded'
-        %li.nav-item
-          = link_to 'About', '#about', class: 'nav-link rounded js-scroll-trigger'
-        %li.nav-item
-          = link_to 'Connect', '#connect', class: 'nav-link rounded js-scroll-trigger'
 / Announcements Carousel
 %header#announcements.masthead.bg-primary.text-white.text-center
   #carouselExampleIndicators.carousel.slide{"data-interval" => "7000", "data-ride" => "carousel"}
@@ -53,25 +36,3 @@
     %h2.text-center What is IUSM?
     =image_tag 'https://photos.smugmug.com/2018/2018-03-24-IUSM-Cataract-Falls/i-DqR2Rdz/0/71adcbbb/X2/EXPORT-7142-X2.jpg', class: 'img-fluid', id: 'student-img', alt: 'Responsive image'
     %p IUSM is an official Christian student group at UC Berkeley. We are an undergraduate student group. The students in our group come from many countries across the world, including the United States. Our mission is to “love locally, impact globally", in which we seek to create a "home away from home" for students at Berkeley. We offer weekly Bible studies, and special talks and lectures on topics such as science vs. faith. We also offer English class, small group gatherings, fun trips around the Bay Area, sports, among other things. If you want to know more about us, contact us here, or come to our upcoming events!
-/ Footer
-%footer.footer.text-center
-  .container
-    .row
-      .col-md-12#connect
-        %h3 Connect with us!
-      .col-md-6.mb-6.mb-lg-0
-        %h5
-          WeChat Group
-        %p=image_tag "weChatQRcode.jpg", height: "100px"
-      .col-md-6.mb-6.mb-lg-0
-        %h5
-          Email
-        %p iusmberkeley@gmail.com
-.copyright.py-4.text-center.text-white
-  .container
-    .small
-      Copyright © IUSM 2017
-/ Scroll to Top Button (Only visible on small and extra-small screen sizes)
-.scroll-top.d-lg-none.position-fixed
-  =link_to '#page-top', class: 'js-scroll-trigger d-block text-center text-white roundedr' do
-    %i.fa.fa-chevron-up
