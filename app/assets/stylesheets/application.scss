@@ -22,8 +22,8 @@ header.masthead {
   padding-top: 120px;
 }
 
-section h2 {
-  margin-bottom: 40px;
+header.masthead h1, h2 {
+  margin: 40px 0px;
 }
 
 .carousel-caption {
@@ -40,4 +40,8 @@ section h2 {
 
 .field {
   margin: 10px 0;
+}
+
+.finished {
+  background-color: rgb(214, 255, 222);
 }

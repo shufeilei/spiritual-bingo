@@ -1,6 +1,6 @@
 #question
-  %h3= @selected_cell[:name]
-  %h4= @selected_cell[:description]
+  %h2= @selected_cell[:name]
+  %h3= @selected_cell[:description]
 .row
   .col-md-12#answer
     = form_for @cell, url: { action: 'create' } do |f|
@@ -9,7 +9,7 @@
       = f.hidden_field :col, value: params[:col]
       .field
         = f.label 'Please share your learning from this activity:'
-        = f.text_area :response, class: 'form-control'
+        = f.text_area :response, rows: 10, class: 'form-control'
       .field
         = f.label 'Want to upload a picture?'
         = f.file_field :picture

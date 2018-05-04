@@ -1,15 +1,17 @@
 %h2 Team and Individual Scores
 .row
-  - @teams_w_boards.each do |team|
+  - @teams.each do |team|
     .col-md-4
       %ul.list-group
         %h3
           = team.name
           %span.badge.badge-primary.badge-pill= team.score
-        - team.users.each do |user|
+        - team.users.includes(:board).each do |user|
           %li.list-group-item.d-flex.justify-content-between.align-items-center
             - if user.board
               = link_to user.username, board_path(user.board)
-            - else
+            - elsif current_user == user
               = link_to user.username, new_board_path
+            - else
+              = user.username
             %span.badge.badge-primary.badge-pill= user.score
