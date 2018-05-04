@@ -1,0 +1,36 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require bootstrap/dist/css/bootstrap.min.css
+ *= require font-awesome/scss/font-awesome.scss
+ *= require magnific-popup/dist/magnific-popup.css
+ *= require startbootstrap-freelancer/scss/freelancer.scss
+ *= require_tree .
+ *= require_self
+ */
+
+header.masthead {
+  padding-top: 100px;
+  padding-bottom: 0px;
+}
+
+.carousel-caption {
+  max-width: 100%;
+  width:100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  left: 0;
+}
+
+.carousel-indicators li {
+  width: 3em;
+  height: 0.5em;
+}

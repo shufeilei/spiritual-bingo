@@ -1,0 +1,7 @@
+{
+  "name": "iusm",
+  "private": true,
+  "dependencies": {
+    "startbootstrap-freelancer": "^4.0.0"
+  }
+}
