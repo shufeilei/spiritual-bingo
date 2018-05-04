@@ -1,0 +1,8 @@
+%h1 Team and Individual Scores
+- @teams_w_boards.each do |team|
+  %ul.list-group
+    %h2= team.name
+    -team.users.each do |user|
+      %li.list-group-item
+        =link_to user.email, boards_path(user.board)
+        %span.badge.badge-primary.badge-pill= user.board.score
