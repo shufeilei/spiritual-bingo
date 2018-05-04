@@ -1,0 +1,7 @@
+%section
+  #opening_question
+    Are you ready for the summer challenge?
+  #opening_answer
+    = form_for @board, url: { action: 'create' } do |f|
+      = f.hidden_field :user_id, value: current_user.id
+      = f.submit "I AM READY!"
