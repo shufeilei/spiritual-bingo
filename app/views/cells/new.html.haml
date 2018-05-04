@@ -1,16 +1,14 @@
-%section.bg-primary.text-white
-  .container
-    #question
-      %h3= @selected_cell[:name]
-      %h4= @selected_cell[:description]
-    .row
-      .col-md-12#answer
-        = form_for @cell, url: { action: 'create' } do |f|
-          = f.hidden_field :board_id, value: params[:board_id]
-          = f.hidden_field :row, value: params[:row]
-          = f.hidden_field :col, value: params[:col]
-          = f.label 'Please share your learning from this activity:'
-          = f.text_area :response, class: 'form-control'
-          = f.label 'Want to upload a picture?'
-          = f.file_field :picture
-          = f.submit 'Submit', class: 'form-control'
+#question
+  %h3= @selected_cell[:name]
+  %h4= @selected_cell[:description]
+.row
+  .col-md-12#answer
+    = form_for @cell, url: { action: 'create' } do |f|
+      = f.hidden_field :board_id, value: params[:board_id]
+      = f.hidden_field :row, value: params[:row]
+      = f.hidden_field :col, value: params[:col]
+      = f.label 'Please share your learning from this activity:'
+      = f.text_area :response, class: 'form-control'
+      = f.label 'Want to upload a picture?'
+      = f.file_field :picture
+      = f.submit 'Submit', class: 'form-control'
