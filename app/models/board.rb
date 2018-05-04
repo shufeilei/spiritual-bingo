@@ -10,39 +10,39 @@ class Board < ApplicationRecord
 
   LAYOUT = [
     [
-      { name: 'blah', level: :easy, description: 'hey' },
-      { name: 'ha', level: :hard, description: 'hey' },
-      { name: 'blah', level: :medium, description: 'hey' },
-      { name: 'ha', level: :hard, description: 'hey' },
-      { name: 'ka', level: :easy, description: 'hey' }
+      { name: 'Do dishes everyday for a week', level: :easy, description: '' },
+      { name: 'Pray through 31 Days of Praise', level: :hard, description: '' },
+      { name: 'Memorize Beatitudes', level: :medium, description: 'Beatitudes are in Matthew 5:3-11' },
+      { name: 'Read one apologetics book', level: :hard, description: '' },
+      { name: 'Share your testimony with one person', level: :easy, description: '' }
     ],
     [
-      { name: 'ha', level: :hard, description: 'hey' },
-      { name: 'blah', level: :medium, description: 'hey' },
-      { name: 'blah', level: :easy, description: 'hey' },
-      { name: 'blah', level: :medium, description: 'hey' },
-      { name: 'ha', level: :hard, description: 'hey' },
+      { name: 'Read one of the Gospels', level: :hard, description: 'Matthew, Mark, Luke and John' },
+      { name: 'Read one JD Greear book', level: :medium, description: 'NEED BOOKS' },
+      { name: 'Memorize one category of verses', level: :easy, description: 'NEED VERSES' },
+      { name: 'Watch all three LOTR movies', level: :medium, description: '' },
+      { name: 'Read one CS Lewis book', level: :hard, description: 'NEED LIST' },
     ],
     [
-      { name: 'blah', level: :medium, description: 'hey' },
-      { name: 'blah', level: :easy, description: 'hey' },
-      { name: 'ha', level: :xhard, description: 'REALLY HARD' },
-      { name: 'blah', level: :easy, description: 'hey' },
-      { name: 'blah', level: :medium, description: 'hey' },
+      { name: 'Memorize 3 hymns', level: :medium, description: 'NEED HYMNS' },
+      { name: 'Memorize order of the Bible', level: :easy, description: 'Check the Bible' },
+      { name: 'Read all of New Testament', level: :xhard, description: '' },
+      { name: 'Cook dinner for a friend', level: :easy, description: 'Very awesome!' },
+      { name: 'Read one Christian Heroes book', level: :medium, description: 'NEED LIST' },
     ],
     [
-      { name: 'ha', level: :hard, description: 'hey' },
-      { name: 'blah', level: :medium, description: 'hey' },
-      { name: 'blah', level: :easy, description: 'hey' },
-      { name: 'blah', level: :medium, description: 'hey' },
-      { name: 'ha', level: :hard, description: 'hey' },
+      { name: 'Read one "Case For" book', level: :hard, description: 'NEED LIST' },
+      { name: 'Read 3 Minor Prophets', level: :medium, description: 'NEED NAMES' },
+      { name: 'Watch one Bible Project video series', level: :easy, description: 'NEED LIST' },
+      { name: 'Do DT for 2 weeks', level: :medium, description: '' },
+      { name: 'Memorize Psalm 1 and 23', level: :hard, description: '' },
     ],
     [
-      { name: 'blah', level: :easy, description: 'hey' },
-      { name: 'ha', level: :hard, description: 'hey' },
-      { name: 'blah', level: :medium, description: 'hey' },
-      { name: 'ha', level: :hard, description: 'hey' },
-      { name: 'ka', level: :easy, description: 'hey' }
+      { name: 'Share DT with your team', level: :easy, description: '' },
+      { name: 'Read one Jerry Bridges book', level: :hard, description: 'NEED LIST' },
+      { name: 'Read One Major Prophet', level: :medium, description: 'NEED NAMES' },
+      { name: 'Read one Christian Classics book', level: :hard, description: 'NEED LIST' },
+      { name: 'Memorize one hymn', level: :easy, description: 'NEED HYMNS' }
     ],
   ]
 
