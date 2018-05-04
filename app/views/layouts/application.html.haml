@@ -17,7 +17,12 @@
     %link{rel: :stylesheet, type: 'text/css', href: 'https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic'}
   %body#page-top
     = render partial: 'layouts/header'
-    = yield
+    - if controller_name == 'pages'
+      = yield
+    - else
+      %section
+        .container
+          = yield
     = render partial: 'layouts/footer'
 
     = javascript_include_tag "startbootstrap-freelancer/js/freelancer.min"
