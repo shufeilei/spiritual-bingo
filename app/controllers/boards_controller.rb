@@ -2,7 +2,7 @@ class BoardsController < ApplicationController
   before_action :set_board, only: %i[show edit update destroy delete_picture]
 
   def index
-    @boards = Board.include(:user).all
+    @teams_w_boards = Team.joins(users: :board)
   end
 
   def show

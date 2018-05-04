@@ -1,10 +1,9 @@
-
 %h1= "#{@owner} Bingo Board"
 = @board.id
 %p Your total score is
 %h2 0
 %table.table.table-bordered
-  - Board::TEMPLATE.each_with_index do |row, index_row|
+  - Board::LAYOUT.each_with_index do |row, index_row|
     %tr
       - row.each_with_index do |cell, index_col|
         %td.text-center{style:'border-width: 5px'}
