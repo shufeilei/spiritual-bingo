@@ -5,7 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
 
   has_one :board
-  belongs_to :team
+  belongs_to :team, optional: true
 
   def score
     board ? board.score : 0

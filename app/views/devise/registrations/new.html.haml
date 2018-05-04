@@ -12,7 +12,8 @@
   .field
     = f.label :team
     %br/
-    = f.select :team_id, options_for_select(Team.pluck(:name, :id)), class: 'form-control'
+    = f.select :team_id, options_for_select(Team.pluck(:name, :id)),
+      { include_blank: 'Select a team...' }, class: 'form-control'
   .field
     = f.label :password
     - if @minimum_password_length
