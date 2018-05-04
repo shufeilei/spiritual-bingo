@@ -1,5 +1,6 @@
 class CellsController < ApplicationController
   before_action :set_cell, only: %i[show edit update destroy delete_picture]
+  before_action :authenticate_user!
 
   def new
     @cell = Cell.new
