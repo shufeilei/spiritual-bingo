@@ -2,18 +2,21 @@ default: &default
   adapter: mysql2
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   timeout: 5000
+  encoding: utf8
+  username: <%= ENV["DB_USERNAME"] %>
+  password: <%= ENV["DB_PASSWORD"] %>
 
 development:
   <<: *default
-  database: db/iusm_development
+  database: iusm_development
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: db/iusm_test
+  database: iusm_test
 
 production:
   <<: *default
-  database: db/iusm_production
+  database: iusm_production
