@@ -1,0 +1,22 @@
+/ Footer
+%footer.footer.text-center
+  .container
+    .row
+      .col-md-12#connect
+        %h3 Connect with us!
+      .col-md-6.mb-6.mb-lg-0
+        %h5
+          WeChat Group
+        %p=image_tag "weChatQRcode.jpg", height: "100px"
+      .col-md-6.mb-6.mb-lg-0
+        %h5
+          Email
+        %p iusmberkeley@gmail.com
+.copyright.py-4.text-center.text-white
+  .container
+    .small
+      Copyright © IUSM 2017
+/ Scroll to Top Button (Only visible on small and extra-small screen sizes)
+.scroll-top.d-lg-none.position-fixed
+  =link_to '#page-top', class: 'js-scroll-trigger d-block text-center text-white roundedr' do
+    %i.fa.fa-chevron-up
