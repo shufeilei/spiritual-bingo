@@ -24,7 +24,7 @@ class CellsController < ApplicationController
   end
 
   def cell_params
-    params.require(:cell).permit(:user_id)
+    params.require(:cell).permit(:board_id, :row, :col, :response)
   end
 
 end
