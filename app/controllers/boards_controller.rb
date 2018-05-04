@@ -7,7 +7,6 @@ class BoardsController < ApplicationController
 
   def show
     @cells = @board.cells
-    @owner = @board.user == current_user ? 'Your' : @board.user.possessive
   end
 
   def create
