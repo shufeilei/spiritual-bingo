@@ -1,12 +1,12 @@
 class Board < ApplicationRecord
   CELL_SCORE = {
-    easy: 5,
-    medium: 10,
-    hard: 15,
-    xhard: 20,
+    easy: 100,
+    medium: 200,
+    hard: 500,
+    xhard: 1000,
   }
 
-  ROW_SCORE = 25
+  ROW_SCORE = 2000
 
   LAYOUT = [
     [
