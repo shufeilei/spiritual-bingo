@@ -19,9 +19,11 @@
         - the_cell = @cells.where(col: index_col, row: index_row).first
         - finished = the_cell ? 'finished' : ''
         %td.text-center{ style:'border-width: 5px', class: finished }
-          %div{ data: { toggle: 'tooltip', placement: 'bottom' },
-                title: cell[:description], class: cell[:level]}
+          %div{class: cell[:level]}
             = cell[:name]
+            - if cell[:description] != ''
+              = fa_icon('question-circle', data: { toggle: 'popover', placement: 'bottom', html: 'true',
+                content: cell[:description]})
           %div{style: 'margin: 20px 0'}
             - if finished == 'finished'
               = link_to 'View answer', board_cell_path(@board, the_cell)
@@ -31,4 +33,4 @@
                 Finish!
 
 :javascript
-  $('[data-toggle="tooltip"]').tooltip()
+  $('[data-toggle="popover"]').popover();
