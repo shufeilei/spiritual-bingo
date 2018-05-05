@@ -3,9 +3,11 @@
     %h2 Instruction: #{Board::LAYOUT[@cell.row][@cell.col][:name]}
     %h4= Board::LAYOUT[@cell.row][@cell.col][:description]
   .col-md-12
-    %h3 Response
-    %h5= @cell.response
-    =@cell.picture
+    %h3 Sharing
+    - if @cell.response
+      %h5= @cell.response
+    - else
+      %h5 Please share some thoughts.
   .col-md-12
     =link_to 'Edit', edit_board_cell_path(@cell.board, @cell)
     |
