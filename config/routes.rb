@@ -6,7 +6,6 @@ Rails.application.routes.draw do
   resources :boards do
     resources :cells
   end
-  # resources :cells
 
   root "pages#show", page: "home"
 
