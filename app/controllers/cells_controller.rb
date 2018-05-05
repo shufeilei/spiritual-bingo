@@ -11,10 +11,10 @@ class CellsController < ApplicationController
   end
 
   def edit
-    # unless @cell.board.user == current_user
-    #   flash[:error] = 'You are not allowed to edit this cell.'
-    #   redirect_to @cell
-    # end
+    unless @cell.board.user == current_user
+      flash[:error] = 'You are not allowed to edit this cell.'
+      redirect_to board_cell_url(@cell.board, @cell)
+    end
   end
 
   def update

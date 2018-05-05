@@ -22,6 +22,8 @@
     - else
       %header.masthead
         .container
+          %p.text-danger= flash[:error]
+          %p.text-warning= flash[:notice]
           = yield
     = render partial: 'layouts/footer'
 
