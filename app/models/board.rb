@@ -19,7 +19,7 @@ class Board < ApplicationRecord
     [
       { name: 'Read one of the Gospels', level: :hard, description: 'Matthew, Mark, Luke and John' },
       { name: 'Read one JD Greear book', level: :medium, description: 'The Gospel, Stop Asking Jesus Into Your Heart' },
-      { name: 'Memorize one category of verses', level: :easy, description: '' },
+      { name: 'Memorize one category of verses', level: :easy, description: 'Click <a href="http://www.fountainoflifebaptist.com/100verses.html">here</a> to see the categories of verses.' },
       { name: 'Watch all three LOTR movies', level: :medium, description: '' },
       { name: 'Read one CS Lewis book', level: :hard, description: 'Mere Christianity, Weight of Glory, Screwtape Letter, Great Divorce, Problem of Pain, Surprised by Joy' },
     ],
