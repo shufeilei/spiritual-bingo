@@ -1,0 +1,23 @@
+%h2
+  Edit #{@user.username}
+= form_for(@user, url: user_path(@user), html: { method: :put }) do |f|
+  .field
+    = f.label :username
+    %br/
+    = f.text_field :username, autofocus: true, autocomplete: "username", class: 'form-control'
+  .field
+    = f.label :email
+    %br/
+    = f.email_field :email, autocomplete: "email", class: 'form-control'
+  .field
+    = f.label :team
+    %br/
+    = f.select :team_id, options_for_select(Team.pluck(:name, :id), @user.team.id),
+      { include_blank: 'Select a team...' }, class: 'form-control'
+  .actions
+    = f.submit "Update", class: 'btn btn-primary'
+    = link_to "Cancel", user_path(@user)
+%hr
+%h3 Cancel my account
+%p
+  =button_to "Cancel my account", registration_path(@user), data: { confirm: "Are you sure?" }, method: :delete, class:'btn btn-danger'
