@@ -7,6 +7,20 @@ class CellsController < ApplicationController
     @selected_cell = Board::LAYOUT[params[:row].to_i][params[:col].to_i]
   end
 
+  def show
+  end
+
+  def edit
+  end
+
+  def update
+    if @cell.update(cell_params)
+      redirect_to @cell
+    else
+      render 'edit'
+    end
+  end
+
   def create
     cell_params[:finished_at] = Time.now
     cell = Cell.new(cell_params)

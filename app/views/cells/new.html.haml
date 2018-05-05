@@ -1,8 +1,9 @@
-#question
-  %h2= @selected_cell[:name]
-  %h3= @selected_cell[:description]
 .row
-  .col-md-12#answer
+  .col-md-12
+    %h2= @selected_cell[:name]
+    %h3= @selected_cell[:description]
+.row
+  .col-md-12
     = form_for @cell, url: { action: 'create' } do |f|
       = f.hidden_field :board_id, value: params[:board_id]
       = f.hidden_field :row, value: params[:row]
