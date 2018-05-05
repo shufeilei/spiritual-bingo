@@ -36,6 +36,11 @@ class CellsController < ApplicationController
     redirect_to cell.board
   end
 
+  def destroy
+    @cell.destroy
+    redirect_to board_path(@cell.board)
+  end
+
   private
 
   def set_cell
@@ -43,7 +48,8 @@ class CellsController < ApplicationController
   end
 
   def cell_params
-    params.require(:cell).permit(:board_id, :row, :col, :response, :finished_at)
+    params.require(:cell).
+      permit(:board_id, :row, :col, :response, :finished_at, :picture)
   end
 
 end

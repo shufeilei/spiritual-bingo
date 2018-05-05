@@ -1,12 +1,15 @@
 %h2
   Edit Response
-= form_for(@cell, url: board_cell_path(@cell.board, @cell), html: { method: :put }) do |f|
+= form_for(@cell, url: board_cell_path(@cell.board, @cell), html: { method: :put, multipart: true }) do |f|
   .field
     = f.label 'Please share your learning from this activity:'
     = f.text_area :response, rows: 10, value: @cell.response, class: 'form-control'
   .field
+    = image_tag @cell.picture.url(:thumb)
     = f.label 'Want to upload a picture?'
     = f.file_field :picture
   .field
+    .pull-right
+      = link_to "Delete", board_cell_path(@cell.board, @cell), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger'
     = f.submit 'Submit', class: 'btn btn-success'
-= link_to "Cancel", board_cell_path(@cell.board, @cell)
+    = link_to "Cancel", board_cell_path(@cell.board, @cell)

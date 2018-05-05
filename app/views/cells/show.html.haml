@@ -8,9 +8,13 @@
       %h5= @cell.response
     - else
       %h5 Please share some thoughts.
+    = image_tag @cell.picture.url(:thumb)
   .col-md-12
     =link_to 'Edit', edit_board_cell_path(@cell.board, @cell)
     |
-    =link_to 'Your board', board_path(@cell.board)
+    - if current_user.board
+      =link_to 'Your board', board_path(current_user.board)
+    - else
+      =link_to 'New board', new_board_path
     |
     =link_to 'Scoreboard', boards_path
