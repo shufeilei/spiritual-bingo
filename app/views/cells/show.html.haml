@@ -8,3 +8,7 @@
     =@cell.picture
   .col-md-12
     =link_to 'Edit', edit_board_cell_path(@cell.board, @cell)
+    |
+    =link_to 'Your board', board_path(@cell.board)
+    |
+    =link_to 'Scoreboard', boards_path
