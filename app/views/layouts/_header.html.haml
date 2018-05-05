@@ -15,3 +15,14 @@
           = link_to 'About', '#about', class: 'nav-link rounded js-scroll-trigger'
         %li.nav-item
           = link_to 'Connect', '#connect', class: 'nav-link rounded js-scroll-trigger'
+        %li.nav-item
+          .dropdown
+            = link_to 'Members', '#', class: 'btn btn-secondary dropdown-toggle',
+              id: "dropdownMenuLink", data: { toggle: 'dropdown' },
+              'aria-haspopup' => 'true', 'aria-expanded' => 'false'
+            .dropdown-menu{"aria-labelledby" => "dropdownMenuButton"}
+              - if user_signed_in?
+                .dropdown-item=link_to "Summer Challenge", boards_path
+                .dropdown-item=link_to "Sign out", destroy_user_session_path
+              - else
+                .dropdown-item=link_to "Sign in", new_user_session_path
