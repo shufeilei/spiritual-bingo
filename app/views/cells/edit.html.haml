@@ -1,5 +1,11 @@
 %h2
   Edit Response
+- if @cell.errors.any?
+  - @cell.errors.full_messages.each do |message|
+    %p.text-danger
+      = fa_icon('exclamation-triangle')
+      = message
+
 = form_for(@cell, url: board_cell_path(@cell.board, @cell), html: { method: :put, multipart: true }) do |f|
   .field
     = f.label 'Please share your learning from this activity:'

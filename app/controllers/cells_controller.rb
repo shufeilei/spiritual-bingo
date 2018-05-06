@@ -19,21 +19,21 @@ class CellsController < ApplicationController
 
   def update
     if @cell.update(cell_params)
-      redirect_to @cell
+      redirect_to board_cell_path(@cell.board, @cell)
     else
       render 'edit'
     end
   end
 
   def create
-    cell_params[:finished_at] = Time.now
     cell = Cell.new(cell_params)
+    cell.finished_at = Time.now
     if cell.save
       flash[:success] = 'Your BINGO cell has been created!'
+      redirect_to cell.board
     else
       flash[:error] = 'Oops! Something went wrong. Please try again.'
     end
-    redirect_to cell.board
   end
 
   def destroy

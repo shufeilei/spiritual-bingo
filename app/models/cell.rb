@@ -4,4 +4,5 @@ class Cell < ApplicationRecord
 
   belongs_to :board
 
+  validates :response, presence: true
 end

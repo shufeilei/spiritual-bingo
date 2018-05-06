@@ -2,38 +2,50 @@
   = button_tag 'Bingo Board Instructions', class: 'btn btn-primary',
     data: { toggle: 'modal', target: '#boardInstrModal' }
 %h1
-  - if @board.user == current_user
-    Your board
-  - else
-    = "#{@board.user.username}'s board"
+  #{@user_possessive} board
 .row
-  .col-md-6
-    %h3
-      Score:
-      = @board.score
-  .col-md-6.text-right
-    %h3
-      Your team score:
-      = @board.user.team.score
-%table.table.table-bordered
-  - Board::LAYOUT.each_with_index do |row, index_row|
-    %tr
-      - row.each_with_index do |cell, index_col|
-        - the_cell = @cells.where(col: index_col, row: index_row).first
-        - finished = the_cell ? 'finished' : ''
-        %td.bingo-cell.text-center{ class: finished }
-          %div.instruction{ class: cell[:level] }
-            = cell[:name]
-            - if cell[:description] != ''
-              = fa_icon('info-circle', data: { toggle: 'popover', placement: 'bottom', html: 'true',
-                content: cell[:description]})
-          %div.response
-            - if finished == 'finished'
-              = link_to 'View answer', board_cell_path(@board, the_cell)
-            - else
-              = link_to new_board_cell_path(board_id: @board.id, row: index_row, col: index_col), class: 'btn btn-info btn-sm' do
-                =fa_icon 'check-circle'
-                Finish!
+  .col-md-9
+    .row
+      .col-md-6
+        %h3
+          Score:
+          = @board.score
+      .col-md-6.text-right
+        %h3
+          #{@user_possessive} team score:
+          = @board.user.team.score
+    %table.table.table-bordered
+      - Board::LAYOUT.each_with_index do |row, index_row|
+        %tr
+          - row.each_with_index do |cell, index_col|
+            - the_cell = @cells.where(col: index_col, row: index_row).first
+            - finished = the_cell ? 'finished' : ''
+            %td.bingo-cell.text-center{ class: finished }
+              %div.instruction{ class: cell[:level] }
+                = cell[:name]
+                - if cell[:description] != ''
+                  = fa_icon('info-circle', data: { toggle: 'popover', placement: 'bottom', html: 'true',
+                    content: cell[:description]})
+              %div.response
+                - if finished == 'finished'
+                  = link_to 'View answer', board_cell_path(@board, the_cell)
+                - else
+                  = link_to new_board_cell_path(board_id: @board.id, row: index_row, col: index_col), class: 'btn btn-info btn-sm' do
+                    =fa_icon 'check-circle'
+                    Finish!
+  .col-md-3
+    %ul.list-group.list-group-flush#recent-activities
+      %li.list-group-item.text-info
+        %strong Recent sharings...
+      - Cell.order(finished_at: :desc).limit(5).each do |cell|
+        %li.list-group-item
+          = link_to board_path(cell.board) do
+            = cell.board.user.username
+          \:
+          = link_to board_cell_path(cell.board, cell) do
+            = cell.response.truncate_words(7)
+
+    .recent-comments
 
 <!-- Modal -->
 #boardInstrModal.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "exampleModalLabel", role: "dialog", tabindex: "-1"}
