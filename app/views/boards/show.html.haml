@@ -4,7 +4,7 @@
       .col-md-9
         %h2 #{@user_possessive} board
       .col-md-3.text-right
-        %h2= button_tag 'Bingo! Instructions', class: 'btn btn-warning',
+        %h2= button_tag 'Instructions', class: 'btn btn-warning',
           data: { toggle: 'modal', target: '#boardInstrModal' }
     .row
       .col-md-6
@@ -47,7 +47,7 @@
     %ul.list-group.list-group-flush#recent-activities
       %li.list-group-item.text-info
         %strong Recent sharings...
-      - Cell.order(finished_at: :desc).limit(5).each do |cell|
+      - Cell.order(finished_at: :desc).limit(10).each do |cell|
         %li.list-group-item
           = link_to board_path(cell.board) do
             = cell.board.user.username
@@ -62,16 +62,24 @@
   .modal-dialog.modal-lg{role: "document"}
     .modal-content
       .modal-header
-        %h5#exampleModalLabel.modal-title Bingo! Instructions
+        %h5#exampleModalLabel.modal-title Game Instructions
         %button.close{"aria-label" => "Close", "data-dismiss" => "modal", type: "button"}
           %span{"aria-hidden" => "true"} ×
       .modal-body
+        %h4 Why are we doing this?
+        %p To grow in our knowledge of God through doing this summer challenge bingo game together.
         %h4 Point System
-        .easy Green is the easy difficulty level = #{Board::SCORE[:easy]} points.
-        .medium Orange is the medium difficulty level = #{Board::SCORE[:medium]} points.
-        .hard Dark red is the hard difficulty level = #{Board::SCORE[:hard]} points.
-        .xhard Red (center) is the extra hard difficulty level = #{Board::SCORE[:xhard]} points.
-        %strong BINGO! (five in a row) = #{Board::SCORE[:bingo]} points
+        %p.easy Green is easy ==> #{Board::SCORE[:easy]} points.
+        %p.medium Orange is medium ==> #{Board::SCORE[:medium]} points.
+        %p.hard Dark red is hard ==> #{Board::SCORE[:hard]} points.
+        %p.xhard Red (center) is extra hard ==> #{Board::SCORE[:xhard]} points.
+        %p
+          %strong BINGO! (five in a row) = #{Board::SCORE[:bingo]} points
+        %h4 Prizes
+        %p Completion of Bingo - IUSM T-shirt!
+        %p Highest Individual Score - Bible Project Outline Book
+        %p Highest TEAM Score - $10 Certificate for Book Table
+
       .modal-footer
         %button.btn.btn-secondary{"data-dismiss" => "modal", type: "button"} Close
 
