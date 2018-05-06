@@ -1,20 +1,23 @@
 .row
   .col-md-12
-    %h2 Instruction: #{Board::LAYOUT[@cell.row][@cell.col][:name]}
-    %h4= Board::LAYOUT[@cell.row][@cell.col][:description]
+    %h2= Board::LAYOUT[@cell.row][@cell.col][:name]
+    %p
+      %em.muted= Board::LAYOUT[@cell.row][@cell.col][:description]
   .col-md-12
-    %h3 Sharing
-    - if @cell.response
-      %h5= @cell.response
-    - else
-      %h5 Please share some thoughts.
-    = image_tag @cell.picture.url(:thumb)
+    %h2 Sharing about the activity:
+    .card
+      .card-body
+        %p
+          - if @cell.response
+            %strong= @cell.response
+          - else
+            %strong Please share some thoughts.
+    - if @cell.picture.present?
+      = image_tag @cell.picture.url(:thumb)
+    %p
   .col-md-12
-    =link_to 'Edit', edit_board_cell_path(@cell.board, @cell)
-    |
-    - if current_user.board
-      =link_to 'Your board', board_path(current_user.board)
-    - else
-      =link_to 'New board', new_board_path
+    - if current_user == @cell.board.user
+      =link_to 'Edit', edit_board_cell_path(@cell.board, @cell), class: 'btn btn-warning'
+    =link_to 'Back to the board', board_path(@cell.board)
     |
     =link_to 'Scoreboard', boards_path

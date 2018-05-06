@@ -22,9 +22,9 @@
               'aria-haspopup' => 'true', 'aria-expanded' => 'false'
             .dropdown-menu{'aria-labelledby' => 'dropdownMenuButton'}
               - if user_signed_in?
-                .dropdown-item=link_to 'Summer Challenge', boards_path
-                .dropdown-item=link_to 'Edit profile', edit_user_path(current_user)
-                .dropdown-item=link_to 'Edit password', edit_user_registration_path
+                .dropdown-item=link_to 'Scoreboard', boards_path
+                .dropdown-item=link_to 'My game board', board_path(current_user.board)
+                .dropdown-item=link_to 'My profile', user_path(current_user)
                 .dropdown-item=link_to 'Sign out', destroy_user_session_path
               - else
                 .dropdown-item=link_to 'Sign in', new_user_session_path
