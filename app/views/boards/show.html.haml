@@ -67,11 +67,11 @@
           %span{"aria-hidden" => "true"} ×
       .modal-body
         %h4 Point System
-        .easy Green is the easy difficulty level = 100 points.
-        .medium Orange is the medium difficulty level = 200 points.
-        .hard Dark red is the hard difficulty level = 500 points.
-        .xhard Red (center) is the extra hard difficulty level = 1,000 points.
-        %strong BINGO! (five in a row) = 5,000 points
+        .easy Green is the easy difficulty level = #{Board::SCORE[:easy]} points.
+        .medium Orange is the medium difficulty level = #{Board::SCORE[:medium]} points.
+        .hard Dark red is the hard difficulty level = #{Board::SCORE[:hard]} points.
+        .xhard Red (center) is the extra hard difficulty level = #{Board::SCORE[:xhard]} points.
+        %strong BINGO! (five in a row) = #{Board::SCORE[:bingo]} points
       .modal-footer
         %button.btn.btn-secondary{"data-dismiss" => "modal", type: "button"} Close
 
