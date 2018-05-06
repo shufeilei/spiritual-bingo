@@ -1,19 +1,15 @@
 class Board < ApplicationRecord
-  CELL_SCORE = {
-    easy: 100,
-    medium: 200,
-    hard: 500,
-    xhard: 1000,
-  }
+  has_many :cells
+  belongs_to :user
 
-  ROW_SCORE = 2000
+  SCORE = { easy: 10, medium: 20, hard: 50, xhard: 100, bingo: 200 }
 
   LAYOUT = [
     [
       { name: 'Do dishes everyday for a week', level: :easy, description: '' },
       { name: 'Pray through 31 Days of Praise', level: :hard, description: '' },
-      { name: 'Memorize Beatitudes', level: :medium, description: 'Beatitudes are in Matthew 5:3-11' },
-      { name: 'Read one apologetics book', level: :hard, description: 'More Than a Carpenter, Letters from a skeptic' },
+      { name: 'Memorize the Beatitudes', level: :medium, description: 'The Beatitudes is in Matthew 5:3-11' },
+      { name: 'Read one apologetics book', level: :hard, description: 'More Than a Carpenter, Letters from a Skeptic' },
       { name: 'Share your testimony with one person', level: :easy, description: '' }
     ],
     [
@@ -46,32 +42,27 @@ class Board < ApplicationRecord
     ],
   ]
 
-  has_many :cells
-  belongs_to :user
-
   def score
     # cells_total
     cells_total = cells.inject(0){ |sum, cell|
-      sum + CELL_SCORE[LAYOUT[cell.row][cell.col][:level]]
+      sum + SCORE[LAYOUT[cell.row][cell.col][:level]]
     }
     # rows_total
     rows_total = cells.group_by(&:row).inject(0){ |sum, (row_index, rows)|
-      rows.count == 5 ? sum + ROW_SCORE : 0
+      sum + (rows.count / 5 * SCORE[:bingo])
     }
 
     # cols_total
     cols_total = cells.group_by(&:col).inject(0){ |sum, (row_index, rows)|
-      rows.count == 5 ? sum + ROW_SCORE : 0
+      sum + (rows.count / 5 * SCORE[:bingo])
     }
 
     # diags_total
     cells_rc = cells.pluck(:row, :col)
-    diags_total = 0
-    diags_total += ROW_SCORE if (cells_rc & [[0, 0], [1, 1], [2, 2], [3, 3], [4, 4]]).count == 5
-    diags_total += ROW_SCORE if (cells_rc & [[0, 4], [1, 3], [2, 2], [3, 1], [4, 0]]).count == 5
+    diags_total = (cells_rc & [[0, 0], [1, 1], [2, 2], [3, 3], [4, 4]]).count / 5 * SCORE[:bingo]
+    diags_total += (cells_rc & [[0, 4], [1, 3], [2, 2], [3, 1], [4, 0]]).count / 5 * SCORE[:bingo]
 
     # total
     cells_total + rows_total + cols_total + diags_total
   end
-
 end
