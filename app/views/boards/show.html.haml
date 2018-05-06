@@ -35,19 +35,19 @@
                     =fa_icon 'check-circle'
                     Finish!
   .col-md-3
-    .card
-      .card-body
-        %h5.card-title Weekly Bonus
-        %p.card-text Some quick example text to build on the card title and make up the bulk of the card's content.
-        = button_tag class: 'btn btn-primary card-link' do
-          = fa_icon('check-circle')
-          Finish
-
-    %br
+    -# .card
+    -#   .card-body
+    -#     %h5.card-title Weekly Bonus
+    -#     %p.card-text Some quick example text to build on the card title and make up the bulk of the card's content.
+    -#     = button_tag class: 'btn btn-primary card-link' do
+    -#       = fa_icon('check-circle')
+    -#       Finish
+    -#
+    -# %br
     %ul.list-group.list-group-flush#recent-activities
       %li.list-group-item.text-info
         %strong Recent sharings...
-      - Cell.order(finished_at: :desc).limit(10).each do |cell|
+      - Cell.order(finished_at: :desc).limit(12).each do |cell|
         %li.list-group-item
           = link_to board_path(cell.board) do
             = cell.board.user.username
