@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_05_04_181550) do
+ActiveRecord::Schema.define(version: 2018_05_07_054043) do
 
   create_table "boards", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "user_id"
@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 2018_05_04_181550) do
   create_table "cells", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "row"
     t.integer "col"
-    t.string "response"
+    t.text "response"
     t.datetime "finished_at"
     t.bigint "board_id"
     t.string "picture_file_name"
