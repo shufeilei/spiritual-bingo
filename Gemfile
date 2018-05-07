@@ -31,6 +31,9 @@ gem 'jbuilder', '~> 2.5'
 
 gem 'devise'
 
+# JQuery
+gem 'jquery-rails'
+gem 'jquery-ui-rails'
 gem 'font-awesome-rails'
 
 # Use ActiveStorage variant
