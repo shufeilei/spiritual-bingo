@@ -11,7 +11,8 @@
 // about supported directives.
 //
 //= require turbolinks
-//= require jquery/dist/jquery.min
+//= require jquery
+//= require jquery_ujs
 //= require bootstrap/dist/js/bootstrap.bundle.min
 //= require jquery.easing/jquery.easing.min
 //= require magnific-popup/dist/jquery.magnific-popup.min
