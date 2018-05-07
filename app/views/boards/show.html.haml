@@ -16,24 +16,29 @@
           #{@board.user.team.name}:
           = @board.user.team.score
     %table.table.table-bordered
-      - Board::LAYOUT.each_with_index do |row, index_row|
+      - Board::CELLS.each_with_index do |row, index_row|
         %tr
           - row.each_with_index do |cell, index_col|
             - the_cell = @cells.where(col: index_col, row: index_row).first
             - finished = the_cell ? 'finished' : ''
             %td.bingo-cell.text-center{ class: finished }
-              %div.instruction{ class: cell[:level] }
+              .instruction{ class: cell[:level] }
                 = cell[:name]
                 - if cell[:description] != ''
                   = fa_icon('info-circle', data: { toggle: 'popover', placement: 'bottom', html: 'true',
                     content: cell[:description]})
-              %div.response
+              .response
                 - if finished == 'finished'
-                  = link_to 'View answer', board_cell_path(@board, the_cell)
+                  = link_to board_cell_path(@board, the_cell), class: 'btn btn-primary btn-sm' do
+                    =fa_icon 'comment'
+                    Response
                 - else
-                  = link_to new_board_cell_path(board_id: @board.id, row: index_row, col: index_col), class: 'btn btn-info btn-sm' do
+                  = link_to new_board_cell_path(board_id: @board.id, row: index_row, col: index_col), class: 'btn btn-warning btn-sm' do
                     =fa_icon 'check-circle'
                     Finish!
+              .all_responses
+                =link_to board_cells_path(@board, {row: index_row, col: index_col}) do
+                  .small All responses
   .col-md-3
     -# .card
     -#   .card-body

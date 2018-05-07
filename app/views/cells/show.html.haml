@@ -2,9 +2,9 @@
   .col-md-12
     .text-center.text-info
       %h2
-        = Board::LAYOUT[@cell.row][@cell.col][:name]
+        = Board::CELLS[@cell.row][@cell.col][:name]
       .lead
-        %em= Board::LAYOUT[@cell.row][@cell.col][:description]
+        %em= Board::CELLS[@cell.row][@cell.col][:description]
   .col-md-12
     .pull-right
       =link_to 'Game board', board_path(@cell.board)

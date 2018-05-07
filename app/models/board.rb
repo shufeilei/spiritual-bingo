@@ -4,7 +4,7 @@ class Board < ApplicationRecord
 
   SCORE = { easy: 10, medium: 20, hard: 50, xhard: 100, bingo: 200 }
 
-  LAYOUT = [
+  CELLS = [
     [
       { name: 'Do dishes everyday for a week', level: :easy, description: '' },
       { name: 'Pray through 31 Days of Praise', level: :hard, description: '' },
@@ -45,7 +45,7 @@ class Board < ApplicationRecord
   def score
     # cells_total
     cells_total = cells.inject(0){ |sum, cell|
-      sum + SCORE[LAYOUT[cell.row][cell.col][:level]]
+      sum + SCORE[CELLS[cell.row][cell.col][:level]]
     }
     # rows_total
     rows_total = cells.group_by(&:row).inject(0){ |sum, (row_index, rows)|
