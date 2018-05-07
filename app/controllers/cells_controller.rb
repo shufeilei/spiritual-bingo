@@ -3,8 +3,14 @@ class CellsController < ApplicationController
   before_action :authenticate_user!
 
   def new
-    @cell = Cell.new
-    @selected_cell = Board::LAYOUT[params[:row].to_i][params[:col].to_i]
+    board = Board.find (params[:board_id])
+    if board.user == current_user
+      @cell = Cell.new
+      @selected_cell = Board::LAYOUT[params[:row].to_i][params[:col].to_i]
+    else
+      flash[:error] = "You cannot submit answers to another player's board."
+      redirect_to board_path(board)
+    end
   end
 
   def show
@@ -29,7 +35,7 @@ class CellsController < ApplicationController
     cell = Cell.new(cell_params)
     cell.finished_at = Time.now
     if cell.save
-      flash[:success] = 'Your BINGO cell has been created!'
+      flash[:success] = 'Congrats! You finished one cell! Keep up the good work!'
       redirect_to cell.board
     else
       flash[:error] = 'Oops! Something went wrong. Please try again.'

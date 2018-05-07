@@ -28,6 +28,7 @@
                 %p.text-danger= flash[:error]
                 %p.text-warning= flash[:notice]
                 %p.text-success= flash[:success]
+            %br
           = yield
     = render partial: 'layouts/footer'
 
