@@ -23,7 +23,7 @@
 
       .col-md-4
         - if @cell.picture.present?
-          .img-fluid.pull-right= image_tag @cell.picture.url(:medium)
+          .img-fluid.img-thumbnail.pull-right= image_tag @cell.picture.url(:medium)
     %p
   .col-md-12
     - if current_user == @cell.board.user
