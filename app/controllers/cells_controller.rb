@@ -2,11 +2,19 @@ class CellsController < ApplicationController
   before_action :set_cell, only: %i[show edit update destroy delete_picture]
   before_action :authenticate_user!
 
+  def index
+    @row = params[:row].to_i
+    @col = params[:col].to_i
+    @cells = Cell.where(row: @row, col: @col).
+      order(finished_at: :desc).includes(board: :user)
+
+  end
+
   def new
-    board = Board.find (params[:board_id])
+    board = Board.find(params[:board_id])
     if board.user == current_user
       @cell = Cell.new
-      @selected_cell = Board::LAYOUT[params[:row].to_i][params[:col].to_i]
+      @selected_cell = Board::CELLS[params[:row].to_i][params[:col].to_i]
     else
       flash[:error] = "You cannot submit answers to another player's board."
       redirect_to board_path(board)
@@ -38,7 +46,8 @@ class CellsController < ApplicationController
       flash[:success] = 'Congrats! You finished one cell! Keep up the good work!'
       redirect_to cell.board
     else
-      flash[:error] = 'Oops! Something went wrong. Please try again.'
+      flash[:error] = 'Please make sure you submit a response.'
+      redirect_to new_board_cell_path(cell.board, cell)
     end
   end
 
