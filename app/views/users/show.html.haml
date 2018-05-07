@@ -4,7 +4,8 @@
 %br
 %h4 Email: #{@user.email}
 %br
-%h4 Team: #{@user.team.name}
+- if @user.team
+  %h4 Team: #{@user.team.name}
 %br
 .actions
   =link_to 'Edit', edit_user_path(@user), class: 'btn btn-success'

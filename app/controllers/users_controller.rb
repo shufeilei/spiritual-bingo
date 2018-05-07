@@ -10,9 +10,11 @@ class UsersController < ApplicationController
       flash[:error] = 'You are not allowed to edit this profile.'
       redirect_to root_path
     end
+    @user.team = Team.new unless @user.team
   end
 
   def update
+    params[:user].delete('team_attributes') unless params[:user][:team_id]=='new'
     if @user.update(user_params)
       flash[:success] = 'Your profile has been updated.'
       redirect_to @user
@@ -29,6 +31,6 @@ class UsersController < ApplicationController
   end
 
   def user_params
-    params.require(:user).permit(:username, :email, :team_id)
+    params.require(:user).permit(:username, :email, :team_id, team_attributes: [:name])
   end
 end
