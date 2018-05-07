@@ -2,7 +2,7 @@
 package configuration for libffi is not found
 have_header: checking for ffi.h... -------------------- no
 
-"clang -o conftest -I/Users/shufeilei/.rbenv/versions/2.5.0/include/ruby-2.5.0/x86_64-darwin17 -I/Users/shufeilei/.rbenv/versions/2.5.0/include/ruby-2.5.0/ruby/backward -I/Users/shufeilei/.rbenv/versions/2.5.0/include/ruby-2.5.0 -I. -I/Users/shufeilei/.rbenv/versions/2.5.0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe conftest.c  -L. -L/Users/shufeilei/.rbenv/versions/2.5.0/lib -L. -L/Users/shufeilei/.rbenv/versions/2.5.0/lib  -fstack-protector -L/usr/local/lib     -lruby.2.5.0-static -framework Foundation  -lpthread -lgmp -ldl -lobjc "
+"clang -o conftest -I/Users/shufeilei/.rbenv/versions/2.5.1/include/ruby-2.5.0/x86_64-darwin17 -I/Users/shufeilei/.rbenv/versions/2.5.1/include/ruby-2.5.0/ruby/backward -I/Users/shufeilei/.rbenv/versions/2.5.1/include/ruby-2.5.0 -I. -I/Users/shufeilei/.rbenv/versions/2.5.1/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe conftest.c  -L. -L/Users/shufeilei/.rbenv/versions/2.5.1/lib -L. -L/Users/shufeilei/.rbenv/versions/2.5.1/lib  -fstack-protector -L/usr/local/lib     -lruby.2.5.1-static -framework Foundation  -lpthread -lgmp -ldl -lobjc "
 checked program was:
 /* begin */
 1: #include "ruby.h"
@@ -13,7 +13,7 @@ checked program was:
 6: }
 /* end */
 
-"clang -E -I/Users/shufeilei/.rbenv/versions/2.5.0/include/ruby-2.5.0/x86_64-darwin17 -I/Users/shufeilei/.rbenv/versions/2.5.0/include/ruby-2.5.0/ruby/backward -I/Users/shufeilei/.rbenv/versions/2.5.0/include/ruby-2.5.0 -I. -I/Users/shufeilei/.rbenv/versions/2.5.0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe  conftest.c -o conftest.i"
+"clang -E -I/Users/shufeilei/.rbenv/versions/2.5.1/include/ruby-2.5.0/x86_64-darwin17 -I/Users/shufeilei/.rbenv/versions/2.5.1/include/ruby-2.5.0/ruby/backward -I/Users/shufeilei/.rbenv/versions/2.5.1/include/ruby-2.5.0 -I. -I/Users/shufeilei/.rbenv/versions/2.5.1/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe  conftest.c -o conftest.i"
 conftest.c:3:10: fatal error: 'ffi.h' file not found
 #include <ffi.h>
          ^~~~~~~
@@ -29,7 +29,7 @@ checked program was:
 
 find_header: checking for ffi.h in /usr/local/include,/usr/include/ffi... -------------------- yes
 
-"clang -E -I/Users/shufeilei/.rbenv/versions/2.5.0/include/ruby-2.5.0/x86_64-darwin17 -I/Users/shufeilei/.rbenv/versions/2.5.0/include/ruby-2.5.0/ruby/backward -I/Users/shufeilei/.rbenv/versions/2.5.0/include/ruby-2.5.0 -I. -I/Users/shufeilei/.rbenv/versions/2.5.0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe  conftest.c -o conftest.i"
+"clang -E -I/Users/shufeilei/.rbenv/versions/2.5.1/include/ruby-2.5.0/x86_64-darwin17 -I/Users/shufeilei/.rbenv/versions/2.5.1/include/ruby-2.5.0/ruby/backward -I/Users/shufeilei/.rbenv/versions/2.5.1/include/ruby-2.5.0 -I. -I/Users/shufeilei/.rbenv/versions/2.5.1/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe  conftest.c -o conftest.i"
 conftest.c:3:10: fatal error: 'ffi.h' file not found
 #include <ffi.h>
          ^~~~~~~
@@ -41,7 +41,7 @@ checked program was:
 3: #include <ffi.h>
 /* end */
 
-"clang -E -I/Users/shufeilei/.rbenv/versions/2.5.0/include/ruby-2.5.0/x86_64-darwin17 -I/Users/shufeilei/.rbenv/versions/2.5.0/include/ruby-2.5.0/ruby/backward -I/Users/shufeilei/.rbenv/versions/2.5.0/include/ruby-2.5.0 -I. -I/Users/shufeilei/.rbenv/versions/2.5.0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe -I/usr/local/include conftest.c -o conftest.i"
+"clang -E -I/Users/shufeilei/.rbenv/versions/2.5.1/include/ruby-2.5.0/x86_64-darwin17 -I/Users/shufeilei/.rbenv/versions/2.5.1/include/ruby-2.5.0/ruby/backward -I/Users/shufeilei/.rbenv/versions/2.5.1/include/ruby-2.5.0 -I. -I/Users/shufeilei/.rbenv/versions/2.5.1/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe -I/usr/local/include conftest.c -o conftest.i"
 conftest.c:3:10: fatal error: 'ffi.h' file not found
 #include <ffi.h>
          ^~~~~~~
@@ -53,7 +53,7 @@ checked program was:
 3: #include <ffi.h>
 /* end */
 
-"clang -E -I/Users/shufeilei/.rbenv/versions/2.5.0/include/ruby-2.5.0/x86_64-darwin17 -I/Users/shufeilei/.rbenv/versions/2.5.0/include/ruby-2.5.0/ruby/backward -I/Users/shufeilei/.rbenv/versions/2.5.0/include/ruby-2.5.0 -I. -I/Users/shufeilei/.rbenv/versions/2.5.0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe -I/usr/include/ffi conftest.c -o conftest.i"
+"clang -E -I/Users/shufeilei/.rbenv/versions/2.5.1/include/ruby-2.5.0/x86_64-darwin17 -I/Users/shufeilei/.rbenv/versions/2.5.1/include/ruby-2.5.0/ruby/backward -I/Users/shufeilei/.rbenv/versions/2.5.1/include/ruby-2.5.0 -I. -I/Users/shufeilei/.rbenv/versions/2.5.1/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe -I/usr/include/ffi conftest.c -o conftest.i"
 checked program was:
 /* begin */
 1: #include "ruby.h"
@@ -65,7 +65,7 @@ checked program was:
 
 have_library: checking for ffi_call() in -lffi... -------------------- yes
 
-"clang -o conftest -I/Users/shufeilei/.rbenv/versions/2.5.0/include/ruby-2.5.0/x86_64-darwin17 -I/Users/shufeilei/.rbenv/versions/2.5.0/include/ruby-2.5.0/ruby/backward -I/Users/shufeilei/.rbenv/versions/2.5.0/include/ruby-2.5.0 -I. -I/usr/include/ffi -I/Users/shufeilei/.rbenv/versions/2.5.0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe conftest.c  -L. -L/Users/shufeilei/.rbenv/versions/2.5.0/lib -L. -L/Users/shufeilei/.rbenv/versions/2.5.0/lib  -fstack-protector -L/usr/local/lib     -lruby.2.5.0-static -framework Foundation -lffi  -lpthread -lgmp -ldl -lobjc "
+"clang -o conftest -I/Users/shufeilei/.rbenv/versions/2.5.1/include/ruby-2.5.0/x86_64-darwin17 -I/Users/shufeilei/.rbenv/versions/2.5.1/include/ruby-2.5.0/ruby/backward -I/Users/shufeilei/.rbenv/versions/2.5.1/include/ruby-2.5.0 -I. -I/usr/include/ffi -I/Users/shufeilei/.rbenv/versions/2.5.1/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe conftest.c  -L. -L/Users/shufeilei/.rbenv/versions/2.5.1/lib -L. -L/Users/shufeilei/.rbenv/versions/2.5.1/lib  -fstack-protector -L/usr/local/lib     -lruby.2.5.1-static -framework Foundation -lffi  -lpthread -lgmp -ldl -lobjc "
 checked program was:
 /* begin */
  1: #include "ruby.h"
@@ -89,7 +89,7 @@ checked program was:
 
 have_func: checking for ffi_closure_alloc()... -------------------- no
 
-"clang -o conftest -I/Users/shufeilei/.rbenv/versions/2.5.0/include/ruby-2.5.0/x86_64-darwin17 -I/Users/shufeilei/.rbenv/versions/2.5.0/include/ruby-2.5.0/ruby/backward -I/Users/shufeilei/.rbenv/versions/2.5.0/include/ruby-2.5.0 -I. -I/usr/include/ffi -I/Users/shufeilei/.rbenv/versions/2.5.0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe conftest.c  -L. -L/Users/shufeilei/.rbenv/versions/2.5.0/lib -L. -L/Users/shufeilei/.rbenv/versions/2.5.0/lib  -fstack-protector -L/usr/local/lib    -lffi  -lruby.2.5.0-static -framework Foundation -lffi  -lpthread -lgmp -ldl -lobjc "
+"clang -o conftest -I/Users/shufeilei/.rbenv/versions/2.5.1/include/ruby-2.5.0/x86_64-darwin17 -I/Users/shufeilei/.rbenv/versions/2.5.1/include/ruby-2.5.0/ruby/backward -I/Users/shufeilei/.rbenv/versions/2.5.1/include/ruby-2.5.0 -I. -I/usr/include/ffi -I/Users/shufeilei/.rbenv/versions/2.5.1/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe conftest.c  -L. -L/Users/shufeilei/.rbenv/versions/2.5.1/lib -L. -L/Users/shufeilei/.rbenv/versions/2.5.1/lib  -fstack-protector -L/usr/local/lib    -lffi  -lruby.2.5.1-static -framework Foundation -lffi  -lpthread -lgmp -ldl -lobjc "
 conftest.c:13:57: error: use of undeclared identifier 'ffi_closure_alloc'
 int t(void) { void ((*volatile p)()); p = (void ((*)()))ffi_closure_alloc; return !p; }
                                                         ^
@@ -111,10 +111,10 @@ checked program was:
 13: int t(void) { void ((*volatile p)()); p = (void ((*)()))ffi_closure_alloc; return !p; }
 /* end */
 
-"clang -o conftest -I/Users/shufeilei/.rbenv/versions/2.5.0/include/ruby-2.5.0/x86_64-darwin17 -I/Users/shufeilei/.rbenv/versions/2.5.0/include/ruby-2.5.0/ruby/backward -I/Users/shufeilei/.rbenv/versions/2.5.0/include/ruby-2.5.0 -I. -I/usr/include/ffi -I/Users/shufeilei/.rbenv/versions/2.5.0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe conftest.c  -L. -L/Users/shufeilei/.rbenv/versions/2.5.0/lib -L. -L/Users/shufeilei/.rbenv/versions/2.5.0/lib  -fstack-protector -L/usr/local/lib    -lffi  -lruby.2.5.0-static -framework Foundation -lffi  -lpthread -lgmp -ldl -lobjc "
+"clang -o conftest -I/Users/shufeilei/.rbenv/versions/2.5.1/include/ruby-2.5.0/x86_64-darwin17 -I/Users/shufeilei/.rbenv/versions/2.5.1/include/ruby-2.5.0/ruby/backward -I/Users/shufeilei/.rbenv/versions/2.5.1/include/ruby-2.5.0 -I. -I/usr/include/ffi -I/Users/shufeilei/.rbenv/versions/2.5.1/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe conftest.c  -L. -L/Users/shufeilei/.rbenv/versions/2.5.1/lib -L. -L/Users/shufeilei/.rbenv/versions/2.5.1/lib  -fstack-protector -L/usr/local/lib    -lffi  -lruby.2.5.1-static -framework Foundation -lffi  -lpthread -lgmp -ldl -lobjc "
 Undefined symbols for architecture x86_64:
   "_ffi_closure_alloc", referenced from:
-      _t in conftest-96fc82.o
+      _t in conftest-1ce385.o
 ld: symbol(s) not found for architecture x86_64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 checked program was:
@@ -139,7 +139,7 @@ checked program was:
 
 have_func: checking for ffi_raw_call()... -------------------- no
 
-"clang -o conftest -I/Users/shufeilei/.rbenv/versions/2.5.0/include/ruby-2.5.0/x86_64-darwin17 -I/Users/shufeilei/.rbenv/versions/2.5.0/include/ruby-2.5.0/ruby/backward -I/Users/shufeilei/.rbenv/versions/2.5.0/include/ruby-2.5.0 -I. -I/usr/include/ffi -I/Users/shufeilei/.rbenv/versions/2.5.0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe conftest.c  -L. -L/Users/shufeilei/.rbenv/versions/2.5.0/lib -L. -L/Users/shufeilei/.rbenv/versions/2.5.0/lib  -fstack-protector -L/usr/local/lib    -lffi  -lruby.2.5.0-static -framework Foundation -lffi  -lpthread -lgmp -ldl -lobjc "
+"clang -o conftest -I/Users/shufeilei/.rbenv/versions/2.5.1/include/ruby-2.5.0/x86_64-darwin17 -I/Users/shufeilei/.rbenv/versions/2.5.1/include/ruby-2.5.0/ruby/backward -I/Users/shufeilei/.rbenv/versions/2.5.1/include/ruby-2.5.0 -I. -I/usr/include/ffi -I/Users/shufeilei/.rbenv/versions/2.5.1/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe conftest.c  -L. -L/Users/shufeilei/.rbenv/versions/2.5.1/lib -L. -L/Users/shufeilei/.rbenv/versions/2.5.1/lib  -fstack-protector -L/usr/local/lib    -lffi  -lruby.2.5.1-static -framework Foundation -lffi  -lpthread -lgmp -ldl -lobjc "
 conftest.c:13:57: error: use of undeclared identifier 'ffi_raw_call'
 int t(void) { void ((*volatile p)()); p = (void ((*)()))ffi_raw_call; return !p; }
                                                         ^
@@ -161,10 +161,10 @@ checked program was:
 13: int t(void) { void ((*volatile p)()); p = (void ((*)()))ffi_raw_call; return !p; }
 /* end */
 
-"clang -o conftest -I/Users/shufeilei/.rbenv/versions/2.5.0/include/ruby-2.5.0/x86_64-darwin17 -I/Users/shufeilei/.rbenv/versions/2.5.0/include/ruby-2.5.0/ruby/backward -I/Users/shufeilei/.rbenv/versions/2.5.0/include/ruby-2.5.0 -I. -I/usr/include/ffi -I/Users/shufeilei/.rbenv/versions/2.5.0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe conftest.c  -L. -L/Users/shufeilei/.rbenv/versions/2.5.0/lib -L. -L/Users/shufeilei/.rbenv/versions/2.5.0/lib  -fstack-protector -L/usr/local/lib    -lffi  -lruby.2.5.0-static -framework Foundation -lffi  -lpthread -lgmp -ldl -lobjc "
+"clang -o conftest -I/Users/shufeilei/.rbenv/versions/2.5.1/include/ruby-2.5.0/x86_64-darwin17 -I/Users/shufeilei/.rbenv/versions/2.5.1/include/ruby-2.5.0/ruby/backward -I/Users/shufeilei/.rbenv/versions/2.5.1/include/ruby-2.5.0 -I. -I/usr/include/ffi -I/Users/shufeilei/.rbenv/versions/2.5.1/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe conftest.c  -L. -L/Users/shufeilei/.rbenv/versions/2.5.1/lib -L. -L/Users/shufeilei/.rbenv/versions/2.5.1/lib  -fstack-protector -L/usr/local/lib    -lffi  -lruby.2.5.1-static -framework Foundation -lffi  -lpthread -lgmp -ldl -lobjc "
 Undefined symbols for architecture x86_64:
   "_ffi_raw_call", referenced from:
-      _t in conftest-543788.o
+      _t in conftest-aa79c3.o
 ld: symbol(s) not found for architecture x86_64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 checked program was:
@@ -189,7 +189,7 @@ checked program was:
 
 have_header: checking for shlwapi.h... -------------------- no
 
-"clang -E -I/Users/shufeilei/.rbenv/versions/2.5.0/include/ruby-2.5.0/x86_64-darwin17 -I/Users/shufeilei/.rbenv/versions/2.5.0/include/ruby-2.5.0/ruby/backward -I/Users/shufeilei/.rbenv/versions/2.5.0/include/ruby-2.5.0 -I. -I/usr/include/ffi -I/Users/shufeilei/.rbenv/versions/2.5.0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe  conftest.c -o conftest.i"
+"clang -E -I/Users/shufeilei/.rbenv/versions/2.5.1/include/ruby-2.5.0/x86_64-darwin17 -I/Users/shufeilei/.rbenv/versions/2.5.1/include/ruby-2.5.0/ruby/backward -I/Users/shufeilei/.rbenv/versions/2.5.1/include/ruby-2.5.0 -I. -I/usr/include/ffi -I/Users/shufeilei/.rbenv/versions/2.5.1/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe  conftest.c -o conftest.i"
 conftest.c:3:10: fatal error: 'shlwapi.h' file not found
 #include <shlwapi.h>
          ^~~~~~~~~~~
@@ -205,7 +205,7 @@ checked program was:
 
 have_func: checking for rb_thread_blocking_region()... -------------------- no
 
-"clang -o conftest -I/Users/shufeilei/.rbenv/versions/2.5.0/include/ruby-2.5.0/x86_64-darwin17 -I/Users/shufeilei/.rbenv/versions/2.5.0/include/ruby-2.5.0/ruby/backward -I/Users/shufeilei/.rbenv/versions/2.5.0/include/ruby-2.5.0 -I. -I/usr/include/ffi -I/Users/shufeilei/.rbenv/versions/2.5.0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe conftest.c  -L. -L/Users/shufeilei/.rbenv/versions/2.5.0/lib -L. -L/Users/shufeilei/.rbenv/versions/2.5.0/lib  -fstack-protector -L/usr/local/lib    -lffi  -lruby.2.5.0-static -framework Foundation -lffi  -lpthread -lgmp -ldl -lobjc "
+"clang -o conftest -I/Users/shufeilei/.rbenv/versions/2.5.1/include/ruby-2.5.0/x86_64-darwin17 -I/Users/shufeilei/.rbenv/versions/2.5.1/include/ruby-2.5.0/ruby/backward -I/Users/shufeilei/.rbenv/versions/2.5.1/include/ruby-2.5.0 -I. -I/usr/include/ffi -I/Users/shufeilei/.rbenv/versions/2.5.1/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe conftest.c  -L. -L/Users/shufeilei/.rbenv/versions/2.5.1/lib -L. -L/Users/shufeilei/.rbenv/versions/2.5.1/lib  -fstack-protector -L/usr/local/lib    -lffi  -lruby.2.5.1-static -framework Foundation -lffi  -lpthread -lgmp -ldl -lobjc "
 conftest.c:13:57: error: use of undeclared identifier 'rb_thread_blocking_region'
 int t(void) { void ((*volatile p)()); p = (void ((*)()))rb_thread_blocking_region; return !p; }
                                                         ^
@@ -227,10 +227,10 @@ checked program was:
 13: int t(void) { void ((*volatile p)()); p = (void ((*)()))rb_thread_blocking_region; return !p; }
 /* end */
 
-"clang -o conftest -I/Users/shufeilei/.rbenv/versions/2.5.0/include/ruby-2.5.0/x86_64-darwin17 -I/Users/shufeilei/.rbenv/versions/2.5.0/include/ruby-2.5.0/ruby/backward -I/Users/shufeilei/.rbenv/versions/2.5.0/include/ruby-2.5.0 -I. -I/usr/include/ffi -I/Users/shufeilei/.rbenv/versions/2.5.0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe conftest.c  -L. -L/Users/shufeilei/.rbenv/versions/2.5.0/lib -L. -L/Users/shufeilei/.rbenv/versions/2.5.0/lib  -fstack-protector -L/usr/local/lib    -lffi  -lruby.2.5.0-static -framework Foundation -lffi  -lpthread -lgmp -ldl -lobjc "
+"clang -o conftest -I/Users/shufeilei/.rbenv/versions/2.5.1/include/ruby-2.5.0/x86_64-darwin17 -I/Users/shufeilei/.rbenv/versions/2.5.1/include/ruby-2.5.0/ruby/backward -I/Users/shufeilei/.rbenv/versions/2.5.1/include/ruby-2.5.0 -I. -I/usr/include/ffi -I/Users/shufeilei/.rbenv/versions/2.5.1/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe conftest.c  -L. -L/Users/shufeilei/.rbenv/versions/2.5.1/lib -L. -L/Users/shufeilei/.rbenv/versions/2.5.1/lib  -fstack-protector -L/usr/local/lib    -lffi  -lruby.2.5.1-static -framework Foundation -lffi  -lpthread -lgmp -ldl -lobjc "
 Undefined symbols for architecture x86_64:
   "_rb_thread_blocking_region", referenced from:
-      _t in conftest-43a17b.o
+      _t in conftest-4f382f.o
 ld: symbol(s) not found for architecture x86_64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 checked program was:
@@ -255,7 +255,7 @@ checked program was:
 
 have_func: checking for rb_thread_call_with_gvl()... -------------------- yes
 
-"clang -o conftest -I/Users/shufeilei/.rbenv/versions/2.5.0/include/ruby-2.5.0/x86_64-darwin17 -I/Users/shufeilei/.rbenv/versions/2.5.0/include/ruby-2.5.0/ruby/backward -I/Users/shufeilei/.rbenv/versions/2.5.0/include/ruby-2.5.0 -I. -I/usr/include/ffi -I/Users/shufeilei/.rbenv/versions/2.5.0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe conftest.c  -L. -L/Users/shufeilei/.rbenv/versions/2.5.0/lib -L. -L/Users/shufeilei/.rbenv/versions/2.5.0/lib  -fstack-protector -L/usr/local/lib    -lffi  -lruby.2.5.0-static -framework Foundation -lffi  -lpthread -lgmp -ldl -lobjc "
+"clang -o conftest -I/Users/shufeilei/.rbenv/versions/2.5.1/include/ruby-2.5.0/x86_64-darwin17 -I/Users/shufeilei/.rbenv/versions/2.5.1/include/ruby-2.5.0/ruby/backward -I/Users/shufeilei/.rbenv/versions/2.5.1/include/ruby-2.5.0 -I. -I/usr/include/ffi -I/Users/shufeilei/.rbenv/versions/2.5.1/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe conftest.c  -L. -L/Users/shufeilei/.rbenv/versions/2.5.1/lib -L. -L/Users/shufeilei/.rbenv/versions/2.5.1/lib  -fstack-protector -L/usr/local/lib    -lffi  -lruby.2.5.1-static -framework Foundation -lffi  -lpthread -lgmp -ldl -lobjc "
 conftest.c:13:57: error: use of undeclared identifier 'rb_thread_call_with_gvl'
 int t(void) { void ((*volatile p)()); p = (void ((*)()))rb_thread_call_with_gvl; return !p; }
                                                         ^
@@ -277,7 +277,7 @@ checked program was:
 13: int t(void) { void ((*volatile p)()); p = (void ((*)()))rb_thread_call_with_gvl; return !p; }
 /* end */
 
-"clang -o conftest -I/Users/shufeilei/.rbenv/versions/2.5.0/include/ruby-2.5.0/x86_64-darwin17 -I/Users/shufeilei/.rbenv/versions/2.5.0/include/ruby-2.5.0/ruby/backward -I/Users/shufeilei/.rbenv/versions/2.5.0/include/ruby-2.5.0 -I. -I/usr/include/ffi -I/Users/shufeilei/.rbenv/versions/2.5.0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe conftest.c  -L. -L/Users/shufeilei/.rbenv/versions/2.5.0/lib -L. -L/Users/shufeilei/.rbenv/versions/2.5.0/lib  -fstack-protector -L/usr/local/lib    -lffi  -lruby.2.5.0-static -framework Foundation -lffi  -lpthread -lgmp -ldl -lobjc "
+"clang -o conftest -I/Users/shufeilei/.rbenv/versions/2.5.1/include/ruby-2.5.0/x86_64-darwin17 -I/Users/shufeilei/.rbenv/versions/2.5.1/include/ruby-2.5.0/ruby/backward -I/Users/shufeilei/.rbenv/versions/2.5.1/include/ruby-2.5.0 -I. -I/usr/include/ffi -I/Users/shufeilei/.rbenv/versions/2.5.1/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe conftest.c  -L. -L/Users/shufeilei/.rbenv/versions/2.5.1/lib -L. -L/Users/shufeilei/.rbenv/versions/2.5.1/lib  -fstack-protector -L/usr/local/lib    -lffi  -lruby.2.5.1-static -framework Foundation -lffi  -lpthread -lgmp -ldl -lobjc "
 checked program was:
 /* begin */
  1: #include "ruby.h"
@@ -300,7 +300,7 @@ checked program was:
 
 have_func: checking for rb_thread_call_without_gvl()... -------------------- yes
 
-"clang -o conftest -I/Users/shufeilei/.rbenv/versions/2.5.0/include/ruby-2.5.0/x86_64-darwin17 -I/Users/shufeilei/.rbenv/versions/2.5.0/include/ruby-2.5.0/ruby/backward -I/Users/shufeilei/.rbenv/versions/2.5.0/include/ruby-2.5.0 -I. -I/usr/include/ffi -I/Users/shufeilei/.rbenv/versions/2.5.0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe conftest.c  -L. -L/Users/shufeilei/.rbenv/versions/2.5.0/lib -L. -L/Users/shufeilei/.rbenv/versions/2.5.0/lib  -fstack-protector -L/usr/local/lib    -lffi  -lruby.2.5.0-static -framework Foundation -lffi  -lpthread -lgmp -ldl -lobjc "
+"clang -o conftest -I/Users/shufeilei/.rbenv/versions/2.5.1/include/ruby-2.5.0/x86_64-darwin17 -I/Users/shufeilei/.rbenv/versions/2.5.1/include/ruby-2.5.0/ruby/backward -I/Users/shufeilei/.rbenv/versions/2.5.1/include/ruby-2.5.0 -I. -I/usr/include/ffi -I/Users/shufeilei/.rbenv/versions/2.5.1/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe conftest.c  -L. -L/Users/shufeilei/.rbenv/versions/2.5.1/lib -L. -L/Users/shufeilei/.rbenv/versions/2.5.1/lib  -fstack-protector -L/usr/local/lib    -lffi  -lruby.2.5.1-static -framework Foundation -lffi  -lpthread -lgmp -ldl -lobjc "
 conftest.c:13:57: error: use of undeclared identifier 'rb_thread_call_without_gvl'
 int t(void) { void ((*volatile p)()); p = (void ((*)()))rb_thread_call_without_gvl; return !p; }
                                                         ^
@@ -322,7 +322,7 @@ checked program was:
 13: int t(void) { void ((*volatile p)()); p = (void ((*)()))rb_thread_call_without_gvl; return !p; }
 /* end */
 
-"clang -o conftest -I/Users/shufeilei/.rbenv/versions/2.5.0/include/ruby-2.5.0/x86_64-darwin17 -I/Users/shufeilei/.rbenv/versions/2.5.0/include/ruby-2.5.0/ruby/backward -I/Users/shufeilei/.rbenv/versions/2.5.0/include/ruby-2.5.0 -I. -I/usr/include/ffi -I/Users/shufeilei/.rbenv/versions/2.5.0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe conftest.c  -L. -L/Users/shufeilei/.rbenv/versions/2.5.0/lib -L. -L/Users/shufeilei/.rbenv/versions/2.5.0/lib  -fstack-protector -L/usr/local/lib    -lffi  -lruby.2.5.0-static -framework Foundation -lffi  -lpthread -lgmp -ldl -lobjc "
+"clang -o conftest -I/Users/shufeilei/.rbenv/versions/2.5.1/include/ruby-2.5.0/x86_64-darwin17 -I/Users/shufeilei/.rbenv/versions/2.5.1/include/ruby-2.5.0/ruby/backward -I/Users/shufeilei/.rbenv/versions/2.5.1/include/ruby-2.5.0 -I. -I/usr/include/ffi -I/Users/shufeilei/.rbenv/versions/2.5.1/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe conftest.c  -L. -L/Users/shufeilei/.rbenv/versions/2.5.1/lib -L. -L/Users/shufeilei/.rbenv/versions/2.5.1/lib  -fstack-protector -L/usr/local/lib    -lffi  -lruby.2.5.1-static -framework Foundation -lffi  -lpthread -lgmp -ldl -lobjc "
 checked program was:
 /* begin */
  1: #include "ruby.h"

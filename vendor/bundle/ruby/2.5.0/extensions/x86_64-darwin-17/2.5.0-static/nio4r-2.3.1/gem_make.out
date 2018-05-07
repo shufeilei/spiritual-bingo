@@ -1,5 +1,5 @@
 current directory: /Library/WebServer/Documents/iusm/vendor/bundle/ruby/2.5.0/gems/nio4r-2.3.1/ext/nio4r
-/Users/shufeilei/.rbenv/versions/2.5.0/bin/ruby -r ./siteconf20180503-94881-xqbn7a.rb extconf.rb
+/Users/shufeilei/.rbenv/versions/2.5.1/bin/ruby -r ./siteconf20180507-92131-1iphlbx.rb extconf.rb
 checking for unistd.h... yes
 checking for sys/select.h... yes
 checking for port_event_t in poll.h... no
@@ -131,7 +131,7 @@ In file included from nio4r_ext.c:7:
 ./../libev/ev.c:3750:36: warning: incompatible pointer types passing 'VALUE (void *)' (aka 'unsigned long (void *)') to parameter of type 'void *(*)(void *)' [-Wincompatible-pointer-types]
         rb_thread_call_without_gvl(ev_backend_poll, (void *)&poll_args, RUBY_UBF_IO, 0);
                                    ^~~~~~~~~~~~~~~
-/Users/shufeilei/.rbenv/versions/2.5.0/include/ruby-2.5.0/ruby/thread.h:28:42: note: passing argument to parameter 'func' here
+/Users/shufeilei/.rbenv/versions/2.5.1/include/ruby-2.5.0/ruby/thread.h:28:42: note: passing argument to parameter 'func' here
 void *rb_thread_call_without_gvl(void *(*func)(void *), void *data1,
                                          ^
 In file included from nio4r_ext.c:7:
@@ -235,7 +235,7 @@ In file included from nio4r_ext.c:7:
 nio4r_ext.c:15:22: warning: incompatible pointer types passing 'void *(void *, size_t)' (aka 'void *(void *, unsigned long)') to parameter of type 'void *(*)(void *, long)' [-Wincompatible-pointer-types]
     ev_set_allocator(xrealloc);
                      ^~~~~~~~
-/Users/shufeilei/.rbenv/versions/2.5.0/include/ruby-2.5.0/ruby/defines.h:197:18: note: expanded from macro 'xrealloc'
+/Users/shufeilei/.rbenv/versions/2.5.1/include/ruby-2.5.0/ruby/defines.h:197:18: note: expanded from macro 'xrealloc'
 #define xrealloc ruby_xrealloc
                  ^~~~~~~~~~~~~
 ./../libev/ev.c:1738:27: note: passing argument to parameter 'cb' here
@@ -247,4 +247,4 @@ linking shared-object nio4r_ext.bundle
 
 current directory: /Library/WebServer/Documents/iusm/vendor/bundle/ruby/2.5.0/gems/nio4r-2.3.1/ext/nio4r
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 nio4r_ext.bundle ./.gem.20180503-94881-pnsqsm
+/usr/bin/install -c -m 0755 nio4r_ext.bundle ./.gem.20180507-92131-1ya77fr

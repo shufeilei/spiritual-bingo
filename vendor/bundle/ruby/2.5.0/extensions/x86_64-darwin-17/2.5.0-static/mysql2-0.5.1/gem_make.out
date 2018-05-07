@@ -1,5 +1,5 @@
 current directory: /Library/WebServer/Documents/iusm/vendor/bundle/ruby/2.5.0/gems/mysql2-0.5.1/ext/mysql2
-/Users/shufeilei/.rbenv/versions/2.5.0/bin/ruby -r ./siteconf20180503-12855-18ow68r.rb extconf.rb
+/Users/shufeilei/.rbenv/versions/2.5.1/bin/ruby -r ./siteconf20180507-92131-1g5n5le.rb extconf.rb
 checking for rb_absint_size()... yes
 checking for rb_absint_singlebit_p()... yes
 checking for rb_wait_for_single_fd()... yes
@@ -42,4 +42,4 @@ linking shared-object mysql2/mysql2.bundle
 
 current directory: /Library/WebServer/Documents/iusm/vendor/bundle/ruby/2.5.0/gems/mysql2-0.5.1/ext/mysql2
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 mysql2.bundle ./.gem.20180503-12855-1q73dol/mysql2
+/usr/bin/install -c -m 0755 mysql2.bundle ./.gem.20180507-92131-1eyl21k/mysql2

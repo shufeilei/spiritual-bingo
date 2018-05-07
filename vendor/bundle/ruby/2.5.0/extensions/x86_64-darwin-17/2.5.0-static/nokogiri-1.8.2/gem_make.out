@@ -1,5 +1,5 @@
 current directory: /Library/WebServer/Documents/iusm/vendor/bundle/ruby/2.5.0/gems/nokogiri-1.8.2/ext/nokogiri
-/Users/shufeilei/.rbenv/versions/2.5.0/bin/ruby -r ./siteconf20180503-94881-1ujskkg.rb extconf.rb
+/Users/shufeilei/.rbenv/versions/2.5.1/bin/ruby -r ./siteconf20180507-92131-155n0rl.rb extconf.rb
 checking if the C compiler accepts ... yes
 checking if the C compiler accepts -Wno-error=unused-command-line-argument-hard-error-in-future... no
 Building nokogiri using packaged libraries.
@@ -29,11 +29,11 @@ If you are using Bundler, tell it to use the option:
 Note, however, that nokogiri is not fully compatible with arbitrary
 versions of libxml2 provided by OS/package vendors.
 ************************************************************************
-Extracting libxml2-2.9.7.tar.gz into tmp/x86_64-apple-darwin17.3.0/ports/libxml2/2.9.7... OK
+Extracting libxml2-2.9.7.tar.gz into tmp/x86_64-apple-darwin17.5.0/ports/libxml2/2.9.7... OK
 Running 'configure' for libxml2 2.9.7... OK
 Running 'compile' for libxml2 2.9.7... OK
 Running 'install' for libxml2 2.9.7... OK
-Activating libxml2 2.9.7 (from /Library/WebServer/Documents/iusm/vendor/bundle/ruby/2.5.0/gems/nokogiri-1.8.2/ports/x86_64-apple-darwin17.3.0/libxml2/2.9.7)...
+Activating libxml2 2.9.7 (from /Library/WebServer/Documents/iusm/vendor/bundle/ruby/2.5.0/gems/nokogiri-1.8.2/ports/x86_64-apple-darwin17.5.0/libxml2/2.9.7)...
 ************************************************************************
 IMPORTANT NOTICE:
 
@@ -53,11 +53,11 @@ If you are using Bundler, tell it to use the option:
     bundle config build.nokogiri --use-system-libraries
     bundle install
 ************************************************************************
-Extracting libxslt-1.1.32.tar.gz into tmp/x86_64-apple-darwin17.3.0/ports/libxslt/1.1.32... OK
+Extracting libxslt-1.1.32.tar.gz into tmp/x86_64-apple-darwin17.5.0/ports/libxslt/1.1.32... OK
 Running 'configure' for libxslt 1.1.32... OK
 Running 'compile' for libxslt 1.1.32... OK
 Running 'install' for libxslt 1.1.32... OK
-Activating libxslt 1.1.32 (from /Library/WebServer/Documents/iusm/vendor/bundle/ruby/2.5.0/gems/nokogiri-1.8.2/ports/x86_64-apple-darwin17.3.0/libxslt/1.1.32)...
+Activating libxslt 1.1.32 (from /Library/WebServer/Documents/iusm/vendor/bundle/ruby/2.5.0/gems/nokogiri-1.8.2/ports/x86_64-apple-darwin17.5.0/libxslt/1.1.32)...
 checking for -llzma... yes
 checking for xmlParseDoc() in libxml/parser.h... yes
 checking for xsltParseStylesheetDoc() in libxslt/xslt.h... yes
@@ -152,27 +152,27 @@ compiling xslt_stylesheet.c
 xslt_stylesheet.c:217:21: warning: incompatible pointer to integer conversion passing 'void *' to parameter of type 'VALUE' (aka 'unsigned long') [-Wint-conversion]
     Data_Get_Struct(ctxt->style->_private, nokogiriXsltStylesheetTuple,
                     ^~~~~~~~~~~~~~~~~~~~~
-/Users/shufeilei/.rbenv/versions/2.5.0/include/ruby-2.5.0/ruby/ruby.h:1183:41: note: expanded from macro 'Data_Get_Struct'
+/Users/shufeilei/.rbenv/versions/2.5.1/include/ruby-2.5.0/ruby/ruby.h:1183:41: note: expanded from macro 'Data_Get_Struct'
     ((sval) = (type*)rb_data_object_get(obj))
                                         ^~~
-/Users/shufeilei/.rbenv/versions/2.5.0/include/ruby-2.5.0/ruby/ruby.h:1354:26: note: passing argument to parameter 'obj' here
+/Users/shufeilei/.rbenv/versions/2.5.1/include/ruby-2.5.0/ruby/ruby.h:1354:26: note: passing argument to parameter 'obj' here
 rb_data_object_get(VALUE obj)
                          ^
 xslt_stylesheet.c:230:21: warning: incompatible pointer to integer conversion passing 'void *' to parameter of type 'VALUE' (aka 'unsigned long') [-Wint-conversion]
     Data_Get_Struct(ctxt->style->_private, nokogiriXsltStylesheetTuple,
                     ^~~~~~~~~~~~~~~~~~~~~
-/Users/shufeilei/.rbenv/versions/2.5.0/include/ruby-2.5.0/ruby/ruby.h:1183:41: note: expanded from macro 'Data_Get_Struct'
+/Users/shufeilei/.rbenv/versions/2.5.1/include/ruby-2.5.0/ruby/ruby.h:1183:41: note: expanded from macro 'Data_Get_Struct'
     ((sval) = (type*)rb_data_object_get(obj))
                                         ^~~
-/Users/shufeilei/.rbenv/versions/2.5.0/include/ruby-2.5.0/ruby/ruby.h:1354:26: note: passing argument to parameter 'obj' here
+/Users/shufeilei/.rbenv/versions/2.5.1/include/ruby-2.5.0/ruby/ruby.h:1354:26: note: passing argument to parameter 'obj' here
 rb_data_object_get(VALUE obj)
                          ^
 2 warnings generated.
 linking shared-object nokogiri/nokogiri.bundle
 Cleaning files only used during build.
-rm -rf /Library/WebServer/Documents/iusm/vendor/bundle/ruby/2.5.0/gems/nokogiri-1.8.2/ext/nokogiri/tmp/x86_64-apple-darwin17.3.0/ports
+rm -rf /Library/WebServer/Documents/iusm/vendor/bundle/ruby/2.5.0/gems/nokogiri-1.8.2/ext/nokogiri/tmp/x86_64-apple-darwin17.5.0/ports
 rm -rf /Library/WebServer/Documents/iusm/vendor/bundle/ruby/2.5.0/gems/nokogiri-1.8.2/ports
 
 current directory: /Library/WebServer/Documents/iusm/vendor/bundle/ruby/2.5.0/gems/nokogiri-1.8.2/ext/nokogiri
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 nokogiri.bundle ./.gem.20180503-94881-qwkd70/nokogiri
+/usr/bin/install -c -m 0755 nokogiri.bundle ./.gem.20180507-92131-wnkn82/nokogiri

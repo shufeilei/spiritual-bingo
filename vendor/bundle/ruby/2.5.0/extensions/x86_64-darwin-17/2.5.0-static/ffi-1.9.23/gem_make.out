@@ -1,5 +1,5 @@
 current directory: /Library/WebServer/Documents/iusm/vendor/bundle/ruby/2.5.0/gems/ffi-1.9.23/ext/ffi_c
-/Users/shufeilei/.rbenv/versions/2.5.0/bin/ruby -r ./siteconf20180503-94881-5g86y9.rb extconf.rb
+/Users/shufeilei/.rbenv/versions/2.5.1/bin/ruby -r ./siteconf20180507-92131-1miiw9g.rb extconf.rb
 checking for ffi.h... no
 checking for ffi.h in /usr/local/include,/usr/include/ffi... yes
 checking for ffi_call() in -lffi... yes
@@ -104,7 +104,6 @@ Making all in testsuite
 make[3]: Nothing to be done for `all'.
 Making all in man
 make[3]: Nothing to be done for `all'.
-make[3]: Nothing to be done for `all-am'.
 compiling AbstractMemory.c
 compiling ArrayType.c
 compiling Buffer.c
@@ -143,4 +142,4 @@ compiling Variadic.c
 compiling ffi.c
 linking shared-object ffi_c.bundle
 ld: warning: could not create compact unwind for _ffi_call_unix64: does not use RBP or RSP based frame
-/usr/bin/install -c -m 0755 ffi_c.bundle ./.gem.20180503-94881-xo28p9
+/usr/bin/install -c -m 0755 ffi_c.bundle ./.gem.20180507-92131-6mjz72
