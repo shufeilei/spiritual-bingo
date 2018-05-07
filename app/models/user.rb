@@ -7,6 +7,8 @@ class User < ApplicationRecord
   has_one :board
   belongs_to :team, optional: true
 
+  accepts_nested_attributes_for :team
+
   def score
     board ? board.score : 0
   end
