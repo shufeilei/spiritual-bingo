@@ -40,29 +40,9 @@
                 =link_to board_cells_path(@board, {row: index_row, col: index_col}) do
                   .small All responses
   .col-md-3
-    -# .card
-    -#   .card-body
-    -#     %h5.card-title Weekly Bonus
-    -#     %p.card-text Some quick example text to build on the card title and make up the bulk of the card's content.
-    -#     = button_tag class: 'btn btn-primary card-link' do
-    -#       = fa_icon('check-circle')
-    -#       Finish
-    -#
-    -# %br
-    %ul.list-group.list-group-flush#recent-activities
-      %li.list-group-item.text-info
-        %strong Recent sharings...
-      - Cell.order(finished_at: :desc).limit(12).each do |cell|
-        %li.list-group-item
-          = link_to board_path(cell.board) do
-            = cell.board.user.username
-          \:
-          = link_to board_cell_path(cell.board, cell) do
-            = cell.response.truncate_words(7)
-
-    .recent-comments
-
-<!-- Modal -->
+    / = render partial: 'bonus'
+    = render partial: 'sharing'
+    
 #boardInstrModal.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "exampleModalLabel", role: "dialog", tabindex: "-1"}
   .modal-dialog.modal-lg{role: "document"}
     .modal-content

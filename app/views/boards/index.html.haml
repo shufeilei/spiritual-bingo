@@ -5,18 +5,22 @@
     %strong Hebrews 10:24-25 And let us consider how to stir up one another to love and good works, not neglecting to meet together, as is the habit of some, but encouraging one another, and all the more as you see the Day drawing near.
 %hr
 .row
-  - @teams.each do |team|
-    .col-md-3
-      %ul.list-group
-        %h5.d-flex.justify-content-between.align-items-center
-          = team.name
-          %span.badge.badge-primary.badge-pill= team.score
-        - team.users.includes(:board).each do |user|
-          %li.list-group-item.d-flex.justify-content-between.align-items-center
-            - if user.board
-              = link_to user.username, board_path(user.board)
-            - elsif current_user == user
-              = link_to user.username, new_board_path
-            - else
-              = user.username
-            %span.badge.badge-primary.badge-pill= user.score
+  .col-md-9
+    .row
+      - @teams.each_with_index do |team, rank|
+        .col-md-6
+          %ul.list-group.my-4
+            %h5.d-flex.justify-content-between.align-items-center
+              No. #{rank+1}: #{team.name}
+              %span.badge.badge-primary.badge-pill= team.score
+            - team.users.includes(:board).sort_by(&:score).reverse.each do |user|
+              %li.list-group-item.d-flex.justify-content-between.align-items-center
+                - if user.board
+                  = link_to user.username, board_path(user.board)
+                - elsif current_user == user
+                  = link_to user.username, new_board_path
+                - else
+                  = user.username
+                %span.badge.badge-primary.badge-pill= user.score
+  .col-md-3
+    = render partial: 'sharing'
