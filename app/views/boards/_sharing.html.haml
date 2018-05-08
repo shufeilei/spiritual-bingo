@@ -1,0 +1,11 @@
+.recent-sharing
+  %ul.list-group.list-group-flush#recent-activities
+    %li.list-group-item.text-info
+      %strong Recent sharings...
+    - Cell.order(finished_at: :desc).limit(12).each do |cell|
+      %li.list-group-item
+        = link_to board_path(cell.board) do
+          = cell.board.user.username
+        \:
+        = link_to board_cell_path(cell.board, cell) do
+          = cell.response.truncate_words(7)
