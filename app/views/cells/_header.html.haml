@@ -1,0 +1,13 @@
+.row
+  .col-md-12
+    .pull-right
+      =link_to 'Game board', board_path(cell.board)
+      |
+      =link_to 'Scoreboard', boards_path
+.row
+  .col-md-12
+    .text-center.text-info
+      %h2
+        = Board::CELLS[cell.row][cell.col][:name]
+      .lead
+        %em= Board::CELLS[cell.row][cell.col][:description]

@@ -11,10 +11,11 @@ class CellsController < ApplicationController
   end
 
   def new
-    board = Board.find(params[:board_id])
+    board = Board.find(params[:board_id].to_i)
     if board.user == current_user
-      @cell = Cell.new
-      @selected_cell = Board::CELLS[params[:row].to_i][params[:col].to_i]
+      @cell = Cell.new( board_id: params[:board_id].to_i,
+                        row: params[:row].to_i,
+                        col: params[:col].to_i)
     else
       flash[:error] = "You cannot submit answers to another player's board."
       redirect_to board_path(board)

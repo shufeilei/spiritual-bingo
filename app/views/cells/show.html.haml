@@ -1,18 +1,4 @@
-.row
-  .col-md-12
-    .pull-right
-      =link_to 'Game board', board_path(@cell.board)
-      |
-      =link_to 'Scoreboard', boards_path
-.row
-  .col-md-12
-    .text-center.text-info
-      %h2
-        = Board::CELLS[@cell.row][@cell.col][:name]
-      .lead
-        %em= Board::CELLS[@cell.row][@cell.col][:description]
-.row
-  .col-md-12
+= render partial: 'header', locals: { cell: @cell }
 .row
   .col-md-12
     .pull-right
@@ -24,7 +10,7 @@
       .card-body
         - if @cell.picture.present?
           .img-fluid= image_tag @cell.picture.url(:medium), align: 'right'
-        = @cell.response
+        = simple_format @cell.response
 .row.my-4
   .col-md-12
     = commontator_thread(@cell)

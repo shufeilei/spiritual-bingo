@@ -1,7 +1,4 @@
-.row
-  .col-md-12
-    %h2= @selected_cell[:name]
-    %h3= @selected_cell[:description]
+= render partial: 'header', locals: { cell: @cell }
 .row
   .col-md-12
     = form_for @cell, url: { action: 'create' }, html: { multipart: true } do |f|
