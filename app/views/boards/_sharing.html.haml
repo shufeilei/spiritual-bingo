@@ -1,7 +1,7 @@
 .recent-sharing
   %ul.list-group.list-group-flush#recent-activities
     %li.list-group-item.text-info
-      %strong Recent sharing...
+      %strong RECENT SHARING
     - Cell.order(finished_at: :desc).limit(12).each do |cell|
       %li.list-group-item
         = link_to board_path(cell.board) do
