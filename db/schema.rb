@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_05_07_054043) do
+ActiveRecord::Schema.define(version: 2018_05_08_154605) do
 
   create_table "boards", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "user_id"
@@ -30,6 +30,45 @@ ActiveRecord::Schema.define(version: 2018_05_07_054043) do
     t.integer "picture_file_size"
     t.datetime "picture_updated_at"
     t.index ["board_id"], name: "index_cells_on_board_id"
+  end
+
+  create_table "commontator_comments", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "creator_type"
+    t.integer "creator_id"
+    t.string "editor_type"
+    t.integer "editor_id"
+    t.integer "thread_id", null: false
+    t.text "body", null: false
+    t.datetime "deleted_at"
+    t.integer "cached_votes_up", default: 0
+    t.integer "cached_votes_down", default: 0
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["cached_votes_down"], name: "index_commontator_comments_on_cached_votes_down"
+    t.index ["cached_votes_up"], name: "index_commontator_comments_on_cached_votes_up"
+    t.index ["creator_id", "creator_type", "thread_id"], name: "index_commontator_comments_on_c_id_and_c_type_and_t_id"
+    t.index ["thread_id", "created_at"], name: "index_commontator_comments_on_thread_id_and_created_at"
+  end
+
+  create_table "commontator_subscriptions", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "subscriber_type", null: false
+    t.integer "subscriber_id", null: false
+    t.integer "thread_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["subscriber_id", "subscriber_type", "thread_id"], name: "index_commontator_subscriptions_on_s_id_and_s_type_and_t_id", unique: true
+    t.index ["thread_id"], name: "index_commontator_subscriptions_on_thread_id"
+  end
+
+  create_table "commontator_threads", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "commontable_type"
+    t.integer "commontable_id"
+    t.datetime "closed_at"
+    t.string "closer_type"
+    t.integer "closer_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["commontable_id", "commontable_type"], name: "index_commontator_threads_on_c_id_and_c_type", unique: true
   end
 
   create_table "teams", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|

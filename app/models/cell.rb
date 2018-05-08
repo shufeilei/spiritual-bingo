@@ -4,6 +4,8 @@ class Cell < ApplicationRecord
 
   validates :response, presence: true
 
+  acts_as_commontable
+
   belongs_to :board
 
 end

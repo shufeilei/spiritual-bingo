@@ -73,6 +73,9 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.12.2)
+    commontator (5.1.0)
+      jquery-rails
+      rails (>= 5.0)
     concurrent-ruby (1.0.5)
     crass (1.0.4)
     devise (4.4.3)
@@ -244,6 +247,7 @@ DEPENDENCIES
   capybara (>= 2.15, < 4.0)
   chromedriver-helper
   coffee-rails (~> 4.2)
+  commontator
   devise
   font-awesome-rails
   haml-rails

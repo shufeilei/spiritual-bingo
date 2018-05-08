@@ -7,6 +7,8 @@ Rails.application.routes.draw do
     resources :cells
   end
 
+  mount Commontator::Engine => '/commontator'
+
   root "pages#show", page: "home"
 
 end
