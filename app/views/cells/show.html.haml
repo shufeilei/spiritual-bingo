@@ -1,8 +1,8 @@
 = render partial: 'header', locals: { cell: @cell }
 .row
   .col-md-12
-    .pull-right
-      - if current_user == @cell.board.user
+    - if current_user == @cell.board.user
+      .pull-right
         = link_to 'Edit', edit_board_cell_path(@cell.board, @cell), class: 'btn btn-sm btn-warning'
         = link_to "Delete", board_cell_path(@cell.board, @cell), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-sm btn-danger'
     %h2 Sharing about the activity:
