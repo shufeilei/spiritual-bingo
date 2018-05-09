@@ -1,8 +1,4 @@
 .comment {
-  font-size: 12px;
-  font-weight: normal;
-  font-style: normal;
-
   border-top: 1px solid;
   border-left: 1px solid;
 
@@ -45,17 +41,13 @@
 }
 
 .comment_form_field textarea {
-  /* padding: 0px; */
+  padding: 15px;
 
   width: 100%;
 }
 
 .comment_avatar {
-  float: left;
-
-  margin-top: 5px;
-  margin-bottom: 10px;
-  margin-right: 10px;
+  display: none;
 }
 
 .comment_timestamp {
