@@ -10,4 +10,4 @@
       %h2
         = Board::CELLS[cell.row][cell.col][:name]
       .lead
-        %em= Board::CELLS[cell.row][cell.col][:description]
+        %em= Board::CELLS[cell.row][cell.col][:description].html_safe
