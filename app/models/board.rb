@@ -6,38 +6,38 @@ class Board < ApplicationRecord
 
   CELLS = [
     [
-      { name: 'Do dishes everyday for a week', level: :easy, description: '' },
-      { name: 'Pray through 31 Days of Praise', level: :hard, description: '' },
+      { name: 'Do dishes everyday for a week', level: :easy, description: 'Your roommates will love you!' },
+      { name: 'Pray through 31 Days of Praise', level: :hard, description: 'Learn how to connect with God through reading well-written prayers of praise.' },
       { name: 'Memorize the Beatitudes', level: :medium, description: 'The Beatitudes is in Matthew 5:3-11' },
-      { name: 'Read one apologetics book', level: :hard, description: 'More Than a Carpenter, Letters from a Skeptic' },
-      { name: 'Share your testimony with one person', level: :easy, description: '' }
+      { name: 'Read one apologetics book', level: :hard, description: 'More Than a Carpenter, Letters from a Skeptic, or another apologetics book of your choice.' },
+      { name: 'Share your testimony', level: :easy, description: 'Share your testimony of how you came to believe in Jesus with at least one person this summer.' }
     ],
     [
-      { name: 'Read one of the Gospels', level: :hard, description: 'Matthew, Mark, Luke and John' },
-      { name: 'Read one JD Greear book', level: :medium, description: 'The Gospel, Stop Asking Jesus Into Your Heart' },
+      { name: 'Read one of the four Gospels', level: :hard, description: 'They are Matthew, Mark, Luke and John. Feel free to read them all.' },
+      { name: 'Read one JD Greear book', level: :medium, description: 'A couple of suggested titles are <em>The Gospel</em> and <em>Stop Asking Jesus Into Your Heart</em>.' },
       { name: 'Memorize one category of verses', level: :easy, description: 'Click <a href="http://www.fountainoflifebaptist.com/100verses.html" target="_blank">here</a> to see the categories of verses.' },
-      { name: 'Watch all three LOTR movies', level: :medium, description: '' },
-      { name: 'Read one CS Lewis book', level: :hard, description: 'Mere Christianity, Weight of Glory, Screwtape Letter, Great Divorce, Problem of Pain, Surprised by Joy' },
+      { name: 'Watch all three LOTR movies', level: :medium, description: "Tolkien's epic story illustrates many deep spiritual truths and lessons." },
+      { name: 'Read one CS Lewis book', level: :hard, description: 'Some titles include <em>Mere Christianity</em>, <em>Weight of Glory</em>, <em>Screwtape Letter</em>, <em>Great Divorce</em>, <em>Problem of Pain</em>, <em>Surprised by Joy</em>' },
     ],
     [
-      { name: 'Memorize 3 hymns', level: :medium, description: 'Amazing Grace, When I Survey The Wondrous Cross, What a Friend We Have in Jesus' },
-      { name: 'Memorize order of the Bible', level: :easy, description: '' },
-      { name: 'Read all of New Testament', level: :xhard, description: '' },
+      { name: 'Memorize three hymns', level: :medium, description: 'Hymns are soul anchoring songs. Here are a few good ones: Amazing Grace, When I Survey The Wondrous Cross, What a Friend We Have in Jesus.' },
+      { name: 'Memorize the order of the Bible', level: :easy, description: 'This will help you quickly find Bible references.' },
+      { name: 'Read the entire New Testament', level: :xhard, description: 'A long read but definitely a GREAT read!' },
       { name: 'Cook dinner for a friend', level: :easy, description: 'Very nice!' },
-      { name: 'Read one Christian Heroes book', level: :medium, description: 'CT Studd, Gladys Aylward, Hudson Taylor, Adoniram Judson, Amy Carmichael, Corrie Ten Boom' },
+      { name: 'Read one Christian Heroes book', level: :medium, description: 'CT Studd, Gladys Aylward, Hudson Taylor, Adoniram Judson, Amy Carmichael, Corrie Ten Boom. Let them help us calibrate our devotion to God.' },
     ],
     [
       { name: 'Read one "Case For" book', level: :hard, description: 'Case for Christ, Case for Faith, Case for Grace, Case for Creator' },
       { name: 'Read 3 Minor Prophets', level: :medium, description: 'Hosea, Joel, Amos, Obadiah, Jonah, Micah, Nahum, Habakkuk, Zephaniah, Haggai, Zechariah, Malachi' },
       { name: 'Watch one Bible Project video series', level: :easy, description: 'Join the Bible Project video has varying length of video series. You can find them <a href="https://thebibleproject.com/all-videos/" target="_blank">here</a>.' },
-      { name: 'Do DT for 2 weeks', level: :medium, description: '' },
-      { name: 'Memorize Psalm 1 and 23', level: :hard, description: '' },
+      { name: 'Do DT for 2 weeks', level: :medium, description: 'This is for regular spiritual discipine, which can easily slip during the summer.' },
+      { name: 'Memorize Psalm 1 and Psalm 23', level: :hard, description: 'These are two great psalms to memorize.' },
     ],
     [
-      { name: 'Share DT with your team', level: :easy, description: '' },
-      { name: 'Read one Jerry Bridges book', level: :hard, description: 'Pursuit of holiness, Practice of Godliness, Discipline of Grace' },
+      { name: 'Share DT with your team', level: :easy, description: 'Please share over email or better yet video conference with your team how God has spoken to you.' },
+      { name: 'Read one Jerry Bridges book', level: :hard, description: '<em>Pursuit of holiness</em>, <em>Practice of Godliness</em>, <em>Discipline of Grace</em> will motivate you to pursue God.' },
       { name: 'Read One Major Prophet', level: :medium, description: 'Isaiah, Jeremiah, Ezekiel, Daniel' },
-      { name: 'Read one Christian Classics book', level: :hard, description: 'Humility, Calvary Road, We Would See Jesus, Loving God' },
+      { name: 'Read one Christian Classics book', level: :hard, description: 'Must-read classics: <em>Humility</em>, <em>Calvary Road</em>, <em>We Would See Jesus</em>, <em>Loving God</em>' },
       { name: 'Memorize one hymn', level: :easy, description: 'Amazing Grace, When I Survey The Wondrous Cross, What a Friend We Have in Jesus' }
     ],
   ]
