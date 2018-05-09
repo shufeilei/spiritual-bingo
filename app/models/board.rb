@@ -15,7 +15,7 @@ class Board < ApplicationRecord
     [
       { name: 'Read one of the Gospels', level: :hard, description: 'Matthew, Mark, Luke and John' },
       { name: 'Read one JD Greear book', level: :medium, description: 'The Gospel, Stop Asking Jesus Into Your Heart' },
-      { name: 'Memorize one category of verses', level: :easy, description: 'Click <a href="http://www.fountainoflifebaptist.com/100verses.html">here</a> to see the categories of verses.' },
+      { name: 'Memorize one category of verses', level: :easy, description: 'Click <a href="http://www.fountainoflifebaptist.com/100verses.html" target="_blank">here</a> to see the categories of verses.' },
       { name: 'Watch all three LOTR movies', level: :medium, description: '' },
       { name: 'Read one CS Lewis book', level: :hard, description: 'Mere Christianity, Weight of Glory, Screwtape Letter, Great Divorce, Problem of Pain, Surprised by Joy' },
     ],
@@ -29,7 +29,7 @@ class Board < ApplicationRecord
     [
       { name: 'Read one "Case For" book', level: :hard, description: 'Case for Christ, Case for Faith, Case for Grace, Case for Creator' },
       { name: 'Read 3 Minor Prophets', level: :medium, description: 'Hosea, Joel, Amos, Obadiah, Jonah, Micah, Nahum, Habakkuk, Zephaniah, Haggai, Zechariah, Malachi' },
-      { name: 'Watch one Bible Project video series', level: :easy, description: '' },
+      { name: 'Watch one Bible Project video series', level: :easy, description: 'Join the Bible Project video has varying length of video series. You can find them <a href="https://thebibleproject.com/all-videos/" target="_blank">here</a>' },
       { name: 'Do DT for 2 weeks', level: :medium, description: '' },
       { name: 'Memorize Psalm 1 and 23', level: :hard, description: '' },
     ],
