@@ -59,3 +59,23 @@ section h2 {
 .finished {
   background-color: rgb(214, 255, 222);
 }
+
+.comment {
+  font: 100% Lato;
+}
+
+.comment_avatar {
+  display: none;
+}
+
+.thread_hide_link {
+  display: none;
+}
+
+.comment_timestamp {
+  font-size: 75%;
+}
+
+.comment_commontator {
+  color: #18BC9C;
+}
