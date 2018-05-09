@@ -24,11 +24,8 @@
             - the_cell = @cells.where(col: index_col, row: index_row).first
             - finished = the_cell ? 'finished' : ''
             %td.bingo-cell.text-center{ class: finished }
-              .instruction{ class: cell[:level] }
+              .instruction{ class: cell[:level], data: { toggle: 'popover', placement: 'top', html: 'true', content: cell[:description] } }
                 = cell[:name]
-                - if cell[:description] != ''
-                  = fa_icon('info-circle', data: { toggle: 'popover', placement: 'bottom', html: 'true',
-                    content: cell[:description]})
               .response
                 - if finished == 'finished'
                   = link_to board_cell_path(@board, the_cell), class: 'btn btn-primary btn-sm' do
@@ -75,3 +72,7 @@
 
 :javascript
   $('[data-toggle="popover"]').popover();
+
+  $('[data-toggle="popover"]').on('click', function (e) {
+    $('[data-toggle="popover"]').not(this).popover('hide');
+  });
