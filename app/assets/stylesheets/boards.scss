@@ -20,13 +20,14 @@
 
 .instruction {
   height: 70px;
+  cursor: pointer;
 }
 
 .response {
-  margin: 10px 0 5px 0;
+  margin: 5px 0;
 }
 
 .table-bordered td.bingo-cell {
-  border-width: 5px;
+  border-width: 2px;
   width: 20%;
 }
