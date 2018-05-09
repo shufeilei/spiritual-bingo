@@ -1,3 +1,6 @@
+- unless current_user.board
+  .pull-right
+    = link_to "LET'S START!", new_board_path, class: 'btn btn-warning btn-lg'
 %h2.text-primary Welcome to the Summer Challenge!
 .lead
   %p We want to grow our relationship with God by increasing our knowledge of the bible and other truths, as well as continuing our fellowship with one another this summer.
