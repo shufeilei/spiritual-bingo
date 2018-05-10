@@ -7,6 +7,8 @@ Rails.application.routes.draw do
     resources :cells
   end
 
+  resources :cells, only: :index
+
   mount Commontator::Engine => '/commontator'
 
   get '/board', to: redirect('/boards')

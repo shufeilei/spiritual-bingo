@@ -1,13 +1,13 @@
 .row
   .col-md-12
     .pull-right
-      =link_to 'Game board', board_path(cell.board)
+      =link_to 'Game board', board_path(board)
       |
       =link_to 'Scoreboard', boards_path
 .row
   .col-md-12
     .mb-3.text-center.text-info
       %h2
-        = Board::CELLS[cell.row][cell.col][:name]
+        = Board::CELLS[row][col][:name]
       .lead
-        %em= Board::CELLS[cell.row][cell.col][:description].html_safe
+        %em= Board::CELLS[row][col][:description].html_safe
