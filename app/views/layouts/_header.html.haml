@@ -17,9 +17,10 @@
           = link_to 'Connect', '#connect', class: 'nav-link rounded js-scroll-trigger'
         %li.nav-item
           .dropdown
-            = link_to 'Member', '#', class: 'btn btn-secondary dropdown-toggle',
+            = link_to '#', class: 'btn btn-secondary dropdown-toggle',
               id: 'dropdownMenuLink', data: { toggle: 'dropdown' },
-              'aria-haspopup' => 'true', 'aria-expanded' => 'false'
+              'aria-haspopup' => 'true', 'aria-expanded' => 'false' do
+              = user_signed_in? ? current_user.username : 'Member'
             .dropdown-menu{'aria-labelledby' => 'dropdownMenuButton'}
               - if user_signed_in?
                 .dropdown-item=link_to 'Summer Challenge', boards_path
