@@ -11,7 +11,7 @@
     %strong Hebrews 10:24-25 And let us consider how to stir up one another to love and good works, not neglecting to meet together, as is the habit of some, but encouraging one another, and all the more as you see the Day drawing near.
 %hr
 .row
-  .col-md-9
+  .col-md-5
     .row
       - @teams.each_with_index do |team, rank|
         .col-md-6
@@ -28,5 +28,5 @@
                 - else
                   = user.username
                 %span.badge.badge-primary.badge-pill= user.score
-  .col-md-3
+  .col-md-4
     = render partial: 'sharing'
