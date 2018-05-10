@@ -1,11 +1,12 @@
-= render partial: 'header', locals: { cell: @cell }
+= render partial: 'header',
+         locals: { board: @cell.board, row: @cell.row, col: @cell.col }
 .row
   .col-md-12
     - if current_user == @cell.board.user
       .pull-right
         = link_to 'Edit', edit_board_cell_path(@cell.board, @cell), class: 'btn btn-sm btn-warning'
         = link_to "Delete", board_cell_path(@cell.board, @cell), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-sm btn-danger'
-    %h2 Sharing about the activity:
+    %h2 #{@cell.board.user.username}'s sharing
     .card{style:'min-height: 200px'}
       .card-body
         - if @cell.picture.present?

@@ -26,18 +26,18 @@
             %td.bingo-cell.text-center{ class: finished }
               .instruction{ class: cell[:level], data: { toggle: 'popover', placement: 'top', html: 'true', content: cell[:description] } }
                 = cell[:name]
-              .response
+              .sharing
                 - if finished == 'finished'
                   = link_to board_cell_path(@board, the_cell), class: 'btn btn-primary btn-sm' do
                     =fa_icon 'comment'
-                    Response (#{the_cell.thread.comments.where(deleted_at:nil).count})
+                    Sharing (#{the_cell.thread.comments.where(deleted_at:nil).count})
                 - else
                   = link_to new_board_cell_path(board_id: @board.id, row: index_row, col: index_col), class: 'btn btn-warning btn-sm' do
                     =fa_icon 'check-circle'
                     Finish!
-              .all_responses
-                =link_to board_cells_path(@board, {row: index_row, col: index_col}) do
-                  .small All responses
+              .all_sharing
+                =link_to cells_path(row: index_row, col: index_col) do
+                  .small All sharing
   .col-md-3
     %h2.text-center
       = button_tag 'Game Instructions', class: 'btn btn-warning',
