@@ -21,7 +21,7 @@
               id: 'dropdownMenuLink', data: { toggle: 'dropdown' },
               'aria-haspopup' => 'true', 'aria-expanded' => 'false' do
               = user_signed_in? ? current_user.username : 'Member'
-            .dropdown-menu{'aria-labelledby' => 'dropdownMenuButton'}
+            .dropdown-menu.dropdown-menu-right{'aria-labelledby' => 'dropdownMenuButton'}
               - if user_signed_in?
                 .dropdown-item=link_to 'Summer Challenge', boards_path
                 - if current_user.board
