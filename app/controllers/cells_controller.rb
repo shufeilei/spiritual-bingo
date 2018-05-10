@@ -58,6 +58,12 @@ class CellsController < ApplicationController
     redirect_to board_path(@cell.board)
   end
 
+  def delete_picture
+    @cell.picture = nil
+    @cell.save
+    redirect_to edit_board_cell_path(@cell.board, @cell)
+  end
+
   private
 
   def set_cell

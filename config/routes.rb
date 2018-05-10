@@ -4,7 +4,11 @@ Rails.application.routes.draw do
 
   resources :users
   resources :boards do
-    resources :cells
+    resources :cells do
+      member do
+        put :delete_picture
+      end
+    end
   end
 
   resources :cells, only: :index

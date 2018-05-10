@@ -10,7 +10,10 @@
     .card{style:'min-height: 200px'}
       .card-body
         - if @cell.picture.present?
-          .img-fluid= image_tag @cell.picture.url(:medium), align: 'right'
+          .cell-picture.pull-right
+            .img-fluid.m-3= image_tag @cell.picture.url(:medium)
+            - if current_user == @cell.board.user
+              .mx-3= link_to 'Delete picture', { action: :delete_picture }, method: :put, class: "btn btn-danger btn-sm"
         = simple_format @cell.response
 .row.my-4
   .col-md-12
