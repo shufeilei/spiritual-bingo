@@ -35,9 +35,9 @@
                   = link_to new_board_cell_path(board_id: @board.id, row: index_row, col: index_col), class: 'btn btn-warning btn-sm' do
                     =fa_icon 'check-circle'
                     Finish!
-              .all_sharing
-                =link_to cells_path(row: index_row, col: index_col) do
-                  .small All sharing
+              .all-sharing.small.mt-2
+                = link_to cells_path(row: index_row, col: index_col) do
+                  All sharing (#{Cell.where(col: index_col, row: index_row).count})
   .col-md-3
     %h2.text-center
       = button_tag 'Game Instructions', class: 'btn btn-warning',
