@@ -20,7 +20,8 @@
       .card{style:'min-height: 100px'}
         .card-body
           - if cell.picture.present?
-            .img-fluid= image_tag cell.picture.url(:medium), align: 'right'
+            = link_to cell.picture.url(:original), data: { featherlight: 'image' } do
+              = image_tag cell.picture.url(:medium), class: 'img-fluid img-thumbnail', align: 'right'
           = simple_format cell.response
       %p
         .pull-right.small
