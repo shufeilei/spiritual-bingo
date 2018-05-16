@@ -10,10 +10,11 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- *= require bootstrap/dist/css/bootstrap.min.css
- *= require magnific-popup/dist/magnific-popup.css
- *= require startbootstrap-freelancer/scss/freelancer.scss
+ *= require bootstrap/dist/css/bootstrap.min
+ *= require magnific-popup/dist/magnific-popup
+ *= require startbootstrap-freelancer/scss/freelancer
  *= require commontator/application
+ *= require featherlight/release/featherlight.min
  *= require_tree .
  *= require_self
  */

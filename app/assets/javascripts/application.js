@@ -17,4 +17,5 @@
 //= require jquery.easing/jquery.easing.min.js
 //= require magnific-popup/dist/jquery.magnific-popup.min.js
 //= require startbootstrap-freelancer/js/jqBootstrapValidation.min.js
+//= require featherlight/release/featherlight.min.js
 //= require_tree .
