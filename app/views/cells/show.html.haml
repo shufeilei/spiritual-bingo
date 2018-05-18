@@ -6,7 +6,8 @@
       .pull-right
         = link_to 'Edit', edit_board_cell_path(@cell.board, @cell), class: 'btn btn-sm btn-warning'
         = link_to "Delete", board_cell_path(@cell.board, @cell), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-sm btn-danger'
-    %h2 #{@cell.board.user.username}'s sharing
+    %h4 #{@cell.board.user.username}'s sharing
+    .small= @cell.finished_at.strftime("%m/%d/%Y %I:%M%P")
     .card{style:'min-height: 200px'}
       .card-body
         - if @cell.picture.present?
