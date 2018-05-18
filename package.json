@@ -2,7 +2,6 @@
   "name": "iusm",
   "private": true,
   "dependencies": {
-    "featherlight": "^1.7.13",
     "popper.js": "^1.14.3",
     "startbootstrap-freelancer": "^4.0.0"
   }
