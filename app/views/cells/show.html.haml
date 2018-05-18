@@ -12,7 +12,7 @@
         - if @cell.picture.present?
           .cell-picture.pull-right
             .m-3
-              = link_to @cell.picture.url(:original), data: { featherlight: 'image' } do
+              = link_to @cell.picture.url(:original), target: '_blank' do
                 = image_tag @cell.picture.url(:medium), class: 'img-fluid img-thumbnail'
             - if current_user == @cell.board.user
               .mx-3= link_to 'Delete picture', { action: :delete_picture }, method: :put, class: "btn btn-danger btn-sm"
