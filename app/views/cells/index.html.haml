@@ -12,7 +12,7 @@
           = link_to cell.board.user.username, board_path(cell.board)
         .pull-right.small.text-muted
           - if cell.finished_at
-            = cell.finished_at.strftime("%m/%d/%Y %H:%M%P")
+            = cell.finished_at.strftime("%m/%d/%Y %I:%M%P")
           - if cell.board.user == current_user
             |
             = link_to 'Edit', edit_board_cell_path(cell.board, cell)
