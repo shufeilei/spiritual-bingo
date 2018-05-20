@@ -30,7 +30,7 @@ class Board < ApplicationRecord
       { name: 'Read one "Case For" book', level: :hard, description: 'Case for Christ, Case for Faith, Case for Grace, Case for Creator' },
       { name: 'Read three Minor Prophets', level: :medium, description: 'Hosea, Joel, Amos, Obadiah, Jonah, Micah, Nahum, Habakkuk, Zephaniah, Haggai, Zechariah, Malachi' },
       { name: 'Watch one Bible Project video series', level: :easy, description: 'Join the Bible Project video has varying length of video series. You can find them <a href="https://thebibleproject.com/all-videos/" target="_blank">here</a>.' },
-      { name: 'Do DT for two weeks', level: :medium, description: 'This is for regular spiritual discipine, which can easily slip during the summer.' },
+      { name: 'Do DT for two weeks', level: :medium, description: 'Encouragement to practice regular spiritual discipine that can easily slip up during the summer.' },
       { name: 'Memorize Psalm 1 and Psalm 23', level: :hard, description: 'These are two great psalms to memorize.' },
     ],
     [
