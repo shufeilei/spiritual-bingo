@@ -8,5 +8,5 @@
           = cell.board.user.username
         \:
         = link_to board_cell_path(cell.board, cell) do
-          = cell.response.truncate_words(10)
+          = markdown(cell.response.truncate_words(15))
         .text-warning.text-right Comments (#{cell.thread.comments.where(deleted_at:nil).count})
