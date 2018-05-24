@@ -6,6 +6,9 @@
       = fa_icon('exclamation-triangle')
       = message
 = form_for(@cell, url: board_cell_path(@cell.board, @cell), html: { method: :put, multipart: true }) do |f|
+  .pull-right
+    =link_to '#', data: { toggle: 'modal', target: '#markdownModal'} do
+      .label.label-primary Markdown Support
   .field
     = f.label 'Edit your sharing for this activity:'
     = f.text_area :response, rows: 10, value: @cell.response, class: 'form-control'
@@ -19,3 +22,4 @@
     = link_to "Cancel", board_cell_path(@cell.board, @cell)
     .pull-right
       = link_to "Delete", board_cell_path(@cell.board, @cell), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger'
+= render partial: 'markdown_modal'

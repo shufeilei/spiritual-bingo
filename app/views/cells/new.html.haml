@@ -6,6 +6,9 @@
       = f.hidden_field :board_id, value: params[:board_id]
       = f.hidden_field :row, value: params[:row]
       = f.hidden_field :col, value: params[:col]
+      .pull-right
+        =link_to '#', data: { toggle: 'modal', target: '#markdownModal'} do
+          .label.label-primary Markdown Support
       .field
         = f.label 'Please share your learning from this activity:'
         = f.text_area :response, rows: 10, class: 'form-control'
@@ -16,3 +19,5 @@
         = f.submit 'Submit', class: 'btn btn-success'
         .pull-right
           = link_to 'Cancel', board_path(Board.find(params[:board_id])), class: 'btn btn-danger'
+
+= render partial: 'markdown_modal'

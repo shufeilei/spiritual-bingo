@@ -17,7 +17,7 @@
                 = image_tag @cell.picture.url(:medium), class: 'img-fluid img-thumbnail'
             - if current_user == @cell.board.user
               .mx-3= link_to 'Delete picture', { action: :delete_picture }, method: :put, class: "btn btn-danger btn-sm"
-        = simple_format @cell.response
+        = markdown(@cell.response)
 .row.my-4
   .col-md-12
     = commontator_thread(@cell)
