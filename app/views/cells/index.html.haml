@@ -22,7 +22,7 @@
           - if cell.picture.present?
             = link_to cell.picture.url(:original), target: '_blank' do
               = image_tag cell.picture.url(:medium), class: 'img-fluid img-thumbnail', align: 'right'
-          = simple_format cell.response
+          = markdown(cell.response)
       %p
         .pull-right.small
         = commontator_thread(cell)
