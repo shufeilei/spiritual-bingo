@@ -35,6 +35,7 @@ gem 'devise'
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
 gem 'font-awesome-rails'
+gem 'redcarpet'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
@@ -46,7 +47,6 @@ gem 'font-awesome-rails'
 gem 'bootsnap', '>= 1.1.0', require: false
 
 gem 'paperclip'
-
 gem 'commontator'
 
 group :development, :test do

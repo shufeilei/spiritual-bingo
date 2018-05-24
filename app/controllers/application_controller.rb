@@ -14,7 +14,6 @@ class ApplicationController < ActionController::Base
     boards_path
   end
 
-
   protected
 
   def configure_permitted_parameters
