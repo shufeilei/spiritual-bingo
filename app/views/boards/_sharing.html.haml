@@ -4,9 +4,7 @@
       %strong RECENT SHARING
     - Cell.includes(:thread, :board).order(finished_at: :desc).limit(6).each do |cell|
       %li.list-group-item
-        = link_to board_path(cell.board) do
-          = cell.board.user.username
-        \:
-        = link_to board_cell_path(cell.board, cell) do
-          = markdown(cell.response.truncate_words(15))
+        = link_to cell.board.user.username, board_path(cell.board)
+        \-
+        = link_to cell.response.truncate_words(15), board_cell_path(cell.board, cell)
         .text-warning.text-right Comments (#{cell.thread.comments.where(deleted_at:nil).count})
