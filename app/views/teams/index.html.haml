@@ -1,0 +1,18 @@
+%h2 Teams
+
+%table.table.table.table-striped
+  %thead
+    %tr
+      %th Team name
+      %th Edit
+      %th Destroy
+  %tbody
+    - @teams.each do |team|
+      %tr
+        %td= link_to team.name, team
+        %td= link_to fa_icon('edit'), edit_team_path(team)
+        %td= link_to fa_icon('trash'), team, method: :delete, data: { confirm: 'Are you sure?' }, class: 'text-danger'
+
+%br
+
+= link_to 'New Team', new_team_path
