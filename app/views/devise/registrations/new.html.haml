@@ -12,7 +12,7 @@
   .field
     = f.label :team
     %br/
-    = f.select :team_id, options_for_select(Team.pluck(:name, :id)),
+    = f.select :team_id, options_for_select(Team.order(:name).pluck(:name, :id)),
       { include_blank: 'Select a team...' }, class: 'form-control'
   .field
     = f.label :password
