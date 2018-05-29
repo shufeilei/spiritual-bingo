@@ -29,8 +29,9 @@
               .sharing
                 - if finished == 'finished'
                   = link_to board_cell_path(@board, the_cell), class: 'btn btn-primary btn-sm' do
-                    =fa_icon 'comment'
-                    Sharing (#{the_cell.thread.comments.where(deleted_at:nil).count})
+                    Read sharing #{fa_icon 'comment'}
+                    %br
+                    %small [ #{pluralize(the_cell.thread.comments.where(deleted_at:nil).count, 'comment')} ]
                 - else
                   = link_to new_board_cell_path(board_id: @board.id, row: index_row, col: index_col), class: 'btn btn-warning btn-sm' do
                     =fa_icon 'check-circle'
