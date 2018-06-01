@@ -2,7 +2,7 @@
   %ul.list-group.list-group-flush#recent-activities
     %li.list-group-item.text-info
       %strong RECENT SHARING
-    - Cell.includes(:thread, :board).order(finished_at: :desc).limit(6).each do |cell|
+    - Cell.includes(:thread, :board).order(finished_at: :desc).limit(7).each do |cell|
       %li.list-group-item
         = link_to cell.board.user.username, board_path(cell.board)
         \-
