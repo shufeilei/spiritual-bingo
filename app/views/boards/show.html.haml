@@ -17,9 +17,10 @@
           Score:
           = @board.score
       .col-md-6.text-right
-        %h4
-          #{@board.user.team.name}:
-          = @board.user.team.score
+        - if @board.user.team
+          %h4
+            #{@board.user.team.name}:
+            = @board.user.team.score
     %table.table.table-bordered
       - Board::CELLS.each_with_index do |row, index_row|
         %tr
