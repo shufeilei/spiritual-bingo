@@ -8,7 +8,7 @@ class BoardsController < ApplicationController
 
   def show
     @cells = @board.cells
-    @user_possessive = @board.user == current_user ? 'My' : "#{@board.user.username}'s"
+    @user_possessive = @board.user == current_user ? 'my' : "#{@board.user.username}'s"
   end
 
   def create
