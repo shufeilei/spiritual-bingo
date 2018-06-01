@@ -1,9 +1,12 @@
 .row
   .col-md-12
     .pull-right
-      =link_to 'Game board', board_path(board)
+      - unless board.user == current_user
+        = link_to "#{board.user.username}'s board", board_path(board)
+        |
+      = link_to 'my board', board_path(current_user.board)
       |
-      =link_to 'Scoreboard', boards_path
+      = link_to 'scoreboard', boards_path
 .row
   .col-md-12
     .mb-3.text-center.text-info
