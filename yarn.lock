@@ -18,6 +18,10 @@ jquery@3.3.1:
   version "3.3.1"
   resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.3.1.tgz#958ce29e81c9790f31be7792df5d4d95fc57fbca"
 
+lightbox2@^2.10.0:
+  version "2.10.0"
+  resolved "https://registry.yarnpkg.com/lightbox2/-/lightbox2-2.10.0.tgz#06b3f7b7bd7c1332c20d037602d9657542fd7de4"
+
 magnific-popup@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/magnific-popup/-/magnific-popup-1.1.0.tgz#3e7362c5bd18f6785fe99e59d013e20af33d3049"
