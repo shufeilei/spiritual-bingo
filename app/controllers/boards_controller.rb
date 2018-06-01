@@ -3,7 +3,7 @@ class BoardsController < ApplicationController
   before_action :set_board, only: %i[show edit update destroy delete_picture]
 
   def index
-    @teams = Team.all.sort_by(&:score).reverse
+    @teams = Team.includes(:users).where.not(users: {id: nil}).sort_by(&:score).reverse
   end
 
   def show
