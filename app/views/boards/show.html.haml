@@ -1,13 +1,16 @@
 .row
   .col-md-9
     .row
-      .col-md-9
-        %h2 #{@user_possessive} board
-      .col-md-3.text-right
+      .col-md-8
+        %h2
+          #{@user_possessive} board
+      .col-md-4.text-right
         - unless @board == current_user.board
-          = link_to 'My board', board_path(current_user.board)
+          = link_to 'my board', board_path(current_user.board)
           |
-        = link_to 'Scoreboard', boards_path
+        = link_to 'scoreboard', boards_path
+        |
+        = link_to 'Instructions', '#', data: { toggle: 'modal', target: '#boardInstrModal' }
     .row
       .col-md-6
         %h4
@@ -40,9 +43,6 @@
                 = link_to cells_path(row: index_row, col: index_col) do
                   All sharing (#{Cell.where(col: index_col, row: index_row).count})
   .col-md-3
-    %h2.text-center
-      = button_tag 'Game Instructions', class: 'btn btn-warning',
-      data: { toggle: 'modal', target: '#boardInstrModal' }
     / = render partial: 'bonus'
     = render partial: 'sharing'
 
