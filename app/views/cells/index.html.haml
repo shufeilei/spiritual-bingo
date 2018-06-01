@@ -20,8 +20,11 @@
       .card{style:'min-height: 100px'}
         .card-body
           - if cell.picture.present?
-            = link_to cell.picture.url(:original), target: '_blank' do
-              = image_tag cell.picture.url(:medium), class: 'img-fluid img-thumbnail', align: 'right'
+            = link_to cell.picture.url(:original),
+              data: { lightbox: cell.picture_file_name,
+                      title: cell.picture_file_name } do
+              = image_tag cell.picture.url(:medium),
+                class: 'img-fluid img-thumbnail', align: 'right'
           = markdown(cell.response)
       %p
         .pull-right.small
