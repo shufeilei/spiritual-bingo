@@ -11,8 +11,6 @@
     = csp_meta_tag
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
     = favicon_link_tag
-
-    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
     %link{rel: :stylesheet, type: 'text/css', href: 'https://fonts.googleapis.com/css?family=Montserrat:400,700'}
     %link{rel: :stylesheet, type: 'text/css', href: 'https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic'}
   %body#page-top
@@ -33,3 +31,4 @@
     = render partial: 'layouts/footer'
 
     = javascript_include_tag "startbootstrap-freelancer/js/freelancer.min"
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
