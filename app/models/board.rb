@@ -37,7 +37,7 @@ class Board < ApplicationRecord
       { name: 'Share DT with your team', level: :easy, description: 'Please share over email or better yet video conference with your team how God has spoken to you.' },
       { name: 'Read one Jerry Bridges book', level: :hard, description: '<em>Pursuit of holiness</em>, <em>Practice of Godliness</em>, <em>Discipline of Grace</em> will motivate you to pursue God.' },
       { name: 'Read One Major Prophet', level: :medium, description: 'Isaiah, Jeremiah, Ezekiel, Daniel' },
-      { name: 'Read one Christian Classics book', level: :hard, description: 'Must-read classics: <em>Humility</em>, <em>Calvary Road</em>, <em>We Would See Jesus</em>, <em>Loving God</em>' },
+      { name: 'Read one Christian Classics book', level: :hard, description: 'Must-read classics: <em>Humility</em> by Andrew Murray, <em>The Calvary Road</em> by Roy Hession, <em>We Would See Jesus</em> by Roy Hession, <em>Loving God</em> by Charles (Chuck) Colson' },
       { name: 'Memorize one hymn', level: :easy, description: 'Amazing Grace, When I Survey The Wondrous Cross, What a Friend We Have in Jesus' }
     ],
   ]
