@@ -1,13 +1,21 @@
 = render partial: 'header',
          locals: { board: @cell.board, row: @cell.row, col: @cell.col }
 .row
-  .col-md-12
-    - if current_user == @cell.board.user
-      .pull-right
-        = link_to 'Edit', edit_board_cell_path(@cell.board, @cell), class: 'btn btn-sm btn-warning'
-        = link_to "Delete", board_cell_path(@cell.board, @cell), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-sm btn-danger'
+  .col-md-7
     %h4 #{@cell.board.user.username}'s sharing
     .small= @cell.finished_at.strftime("%m/%d/%Y %I:%M%P")
+  .col-md-5
+    %ul.nav.justify-content-end
+      %li.nav-item
+        = link_to cells_path(row: @cell.row, col: @cell.col), class: 'nav-link' do
+          Other sharing [#{Cell.where(col: @cell.row, row: @cell.col).count}]
+        - if current_user == @cell.board.user
+          %li.nav-item
+            = link_to 'Edit', edit_board_cell_path(@cell.board, @cell), class: 'nav-link'
+          %li.nav-item
+            = link_to "Delete", board_cell_path(@cell.board, @cell), method: :delete, data: { confirm: 'Are you sure?' }, class: 'nav-link'
+.row
+  .col-md-12
     .card{style:'min-height: 200px'}
       .card-body
         - if @cell.picture.present?
