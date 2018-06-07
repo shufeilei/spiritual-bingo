@@ -13,7 +13,6 @@
 //= require turbolinks
 //= require jquery
 //= require jquery_ujs
-//= require lightbox2/dist/js/lightbox.min
 //= require bootstrap/dist/js/bootstrap.bundle.min
 //= require jquery.easing/jquery.easing.min
 //= require magnific-popup/dist/jquery.magnific-popup.min
