@@ -9,8 +9,6 @@
           = link_to 'my board', board_path(current_user.board)
           |
         = link_to 'scoreboard', boards_path
-        |
-        = link_to 'instructions', '#', data: { toggle: 'modal', target: '#boardInstrModal' }
     .row
       .col-md-6
         %h4
@@ -46,31 +44,6 @@
   .col-md-3
     / = render partial: 'bonus'
     = render partial: 'sharing'
-
-#boardInstrModal.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "exampleModalLabel", role: "dialog", tabindex: "-1"}
-  .modal-dialog.modal-lg{role: "document"}
-    .modal-content
-      .modal-header
-        %h5#exampleModalLabel.modal-title Game Instructions
-        %button.close{"aria-label" => "Close", "data-dismiss" => "modal", type: "button"}
-          %span{"aria-hidden" => "true"} ×
-      .modal-body
-        %h4 Why are we doing this?
-        %p To grow in our knowledge of God through doing this summer challenge bingo game together.
-        %h4 Point System
-        %p.easy Green is easy ==> #{Board::SCORE[:easy]} points.
-        %p.medium Orange is medium ==> #{Board::SCORE[:medium]} points.
-        %p.hard Dark red is hard ==> #{Board::SCORE[:hard]} points.
-        %p.xhard Red (center) is extra hard ==> #{Board::SCORE[:xhard]} points.
-        %p
-          %strong BINGO! (five in a row) = #{Board::SCORE[:bingo]} points
-        %h4 Prizes
-        %p Completion of Bingo - IUSM T-shirt!
-        %p Highest Individual Score - Bible Project Outline Book
-        %p Highest TEAM Score - $10 Certificate for Book Table
-
-      .modal-footer
-        %button.btn.btn-secondary{"data-dismiss" => "modal", type: "button"} Close
 
 :javascript
   $('[data-toggle="popover"]').popover();
