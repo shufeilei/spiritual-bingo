@@ -2,8 +2,9 @@
   .col-md-9
     .row
       .col-md-8
-        %h2
+        %h2.text-primary
           #{@user_possessive} board
+          = link_to fa_icon('user'), user_path(@board.user)
       .col-md-4.text-right
         - unless @board == current_user.board
           = link_to 'my board', board_path(current_user.board)
