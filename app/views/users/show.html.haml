@@ -1,14 +1,28 @@
-%h2 Profile
-%br
-%h4 Username: #{@user.username}
-%br
-%h4 Email: #{@user.email}
-%br
-- if @user.team
-  %h4 Team: #{@user.team.name}
-%br
-.actions
-  =link_to 'Edit', edit_user_path(@user), class: 'btn btn-success'
-  =link_to 'Change password', edit_user_registration_path
-  |
-  =link_to 'Scoreboard', boards_path
+.row
+  .col-md-3
+    %h2 Profile
+    %p
+      %strong Username:
+      = @user.username
+    %p
+      %strong Email:
+      = @user.email
+    - if @user.team
+      %p
+        %strong Team:
+        = @user.team.name
+    %p
+      = link_to 'Game board', board_path(@user.board)
+      |
+      = link_to 'Scoreboard', boards_path
+    - if @user == current_user
+      %p
+        = link_to 'Edit', edit_user_path(@user), class: 'btn btn-warning btn-sm'
+        = link_to 'Change password', edit_user_registration_path, class: 'btn btn-warning btn-sm'
+  .col-md-9
+    %h2 #{@user.username}'s sharing
+    - @sharings.each do |sharing|
+      %p
+        %strong.text-primary
+          = Board::CELLS[sharing.row][sharing.col][:name]
+      %p= sharing.response

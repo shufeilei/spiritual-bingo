@@ -3,6 +3,7 @@ class UsersController < ApplicationController
   before_action :authenticate_user!
 
   def show
+    @sharings = @user.board.cells.order(finished_at: :desc)
   end
 
   def edit
