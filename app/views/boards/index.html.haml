@@ -23,13 +23,16 @@
               %span.badge.badge-primary.badge-pill= team.score
             - team.users.includes(:board).sort_by(&:score).reverse.each do |user|
               %li.list-group-item.d-flex.justify-content-between.align-items-center
-                - if user.board
-                  = link_to user.username, board_path(user.board)
-                - elsif current_user == user
-                  = link_to user.username, new_board_path
-                - else
-                  = user.username
-                %span.badge.badge-primary.badge-pill= user.score
+                %span
+                  - if user.board
+                    = link_to user.username, board_path(user.board)
+                  - elsif current_user == user
+                    = link_to user.username, new_board_path
+                  - else
+                    = user.username
+                  %span.ml-1= link_to fa_icon('user'), user_path(user)
+                %span.badge.badge-primary.badge-pill
+                  = user.score
   .col-md-4
     = render partial: 'sharing'
 
