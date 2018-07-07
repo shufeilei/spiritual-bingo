@@ -47,8 +47,8 @@
     = render partial: 'sharing'
 
 :javascript
-  $('.instruction').popover();
+  $('.instruction[data-toggle="popover"]').popover();
 
-  // $('.instruction[data-toggle="popover"]').on('click', function (e) {
-  //   $('.instruction[data-toggle="popover"]').not(this).popover('hide');
-  // });
+  $('.instruction[data-toggle="popover"]').on('click', function (e) {
+    $('.instruction[data-toggle="popover"]').not(this).popover('hide');
+  });
