@@ -13,6 +13,4 @@
 //= require turbolinks
 //= require jquery
 //= require jquery_ujs
-//= require dist/bundle.js
-//= require instafeed.min.js
 //= require_tree .
