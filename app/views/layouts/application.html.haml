@@ -6,30 +6,12 @@
     %meta{name: "description", content: "Official website for International Undergraduate Student Ministry at UC Berkeley"}
     %meta{name: "author", content: "Shufei Lei"}
 
-    %title International Undergraduate Student Ministry
+    %title IUSM | International Undergraduate Student Ministry
     = csrf_meta_tags
     = csp_meta_tag
-    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
-    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
     = favicon_link_tag
-    %link{rel: :stylesheet, type: 'text/css', href: 'https://fonts.googleapis.com/css?family=Montserrat:400,700'}
-    %link{rel: :stylesheet, type: 'text/css', href: 'https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic'}
+    %link{rel: :stylesheet, type: 'text/css', href: 'https://use.fontawesome.com/releases/v5.2.0/css/all.css', integrity: 'sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ', crossorigin: 'anonymous'}
   %body#page-top
-    = render partial: 'layouts/header'
-    - if controller_name == 'pages'
-      = yield
-    - else
-      %header.masthead
-        .container
-          - if flash[:error] || flash[:notice] || flash[:success]
-            .card
-              .card-body.bg-light
-                %p.text-danger= flash[:error]
-                %p.text-warning= flash[:notice]
-                %p.text-success= flash[:success]
-            %br
-          = yield
-    = render partial: 'layouts/footer'
-
+    #react-root
     = javascript_include_tag 'startbootstrap-freelancer/js/freelancer.min'
     = javascript_include_tag 'lightbox2/dist/js/lightbox.min'

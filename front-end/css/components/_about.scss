@@ -1,0 +1,79 @@
+// Source: https://designpieces.com/2012/12/social-media-colours-hex-and-rgb/
+$social-brand-facebook: #3b5998;
+$social-brand-twitter: #55acee;
+$social-brand-linkedin: #007bb5;
+$about-the-author-text-transform: uppercase;
+$about-the-author-separator-width: 11rem;
+$about-the-author-separator-thickness: 0.125rem;
+
+.about-iusm {
+  @include align-items(center);
+  @include display-flex;
+  background-color: $white;
+  // padding: 1rem;
+  // border: 1px solid $medium-gray;
+
+  .separator-left {
+    text-align: left;
+    @include clearfix;
+
+    &::after {
+      position: relative;
+      width: $about-the-author-separator-width;
+      border-bottom: $about-the-author-separator-thickness solid $primary-color;
+      // margin: 0.3rem auto 0;
+      margin-left: 0;
+    }
+  }
+
+  &__title {
+    text-transform: $about-the-author-text-transform;
+  }
+
+  .author-social {
+    text-align: center;
+    // margin-top: 0.7rem;
+    // margin-bottom: 0.7rem;
+
+    .fa-stack {
+      display: inline-block;
+
+      &.facebook {
+        color: lighten($social-brand-facebook, 10%);
+
+        &:hover,
+        &:focus {
+          color: $social-brand-facebook;
+        }
+      }
+
+      &.twitter {
+        color: lighten($social-brand-twitter, 10%);
+
+        &:hover,
+        &:focus {
+          color: $social-brand-twitter;
+        }
+      }
+
+      &.linkedin {
+        color: lighten($social-brand-linkedin, 10%);
+
+        &:hover,
+        &:focus {
+          color: $social-brand-linkedin;
+        }
+      }
+    }
+  }
+
+  &__image {
+    border-radius: 50%;
+    padding: 25px;
+  }
+
+  &__image-div {
+    @include circle-image(250px);
+    background-image: url(https://photos.smugmug.com/IUSM/2018/2018-07-04-IUSM-Independence-Day-Monterey-Trip/i-z6CQ2ZL/0/70292ada/X5/EXPORT-3125-X5.jpg);
+  }
+}

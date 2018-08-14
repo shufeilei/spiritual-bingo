@@ -1,0 +1,35 @@
+{
+  "name": "iusm-web",
+  "version": "1.0.0",
+  "description": "IUSM Website",
+  "main": "index.js",
+  "repository": "git@github.com:yubodiwu/iusm-web.git",
+  "author": "<yubo.diwu@minted.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "sass css/style.scss ../app/assets/stylesheets/app.css && webpack --config webpack.config.js",
+    "cwebpack": "webpack --watch --config webpack.config.js",
+    "csass": "sass --watch css/style.scss styles/app.css"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^8.2.6",
+    "babel-loader": "^7.1.5",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "eslint": "^5.3.0",
+    "eslint-config-airbnb": "^17.0.0",
+    "eslint-plugin-import": "^2.13.0",
+    "eslint-plugin-jsx-a11y": "^6.1.1",
+    "eslint-plugin-react": "^7.10.0",
+    "webpack": "^4.16.5",
+    "webpack-cli": "^3.1.0"
+  },
+  "dependencies": {
+    "prop-types": "^15.6.2",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2",
+    "react-router": "^4.3.1",
+    "react-router-dom": "^4.3.1"
+  }
+}

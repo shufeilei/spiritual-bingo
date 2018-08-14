@@ -1,0 +1,565 @@
+/**
+ * Foundation for Sites by ZURB
+ * Version 6.5.0-rc.2
+ * foundation.zurb.com
+ * Licensed under MIT Open Source
+ */
+@font-face {
+  font-family: "ralewaythin";
+  src: url(./fonts/raleway-thin-webfont.tff);
+  src: url(./fonts/raleway-thin-webfont.tff) format("tff"), url(./fonts/raleway-thin-webfont.woff2) format("woff2"), url(./fonts/raleway-thin-webfont.woff) format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "submarine_beachregular";
+  src: url(./fonts/submarine-beach-demo-webfont.tff);
+  src: url(./fonts/submarine-beach-demo-webfont.tff) format("tff"), url(./fonts/submarine-beach-demo-webfont.woff2) format("woff2"), url(./fonts/submarine-beach-demo-webfont.woff) format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+.fancy-80 {
+  font-family: "submarine_beachregular", arial, sans-serif;
+  font-size: 80px;
+  margin-bottom: -30px;
+}
+
+.fancy-55 {
+  font-family: "submarine_beachregular", arial, sans-serif;
+  font-size: 55px;
+  margin-bottom: -15px;
+}
+
+.about-iusm {
+  -webkit-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  background-color: #fefefe;
+}
+.about-iusm .separator-left {
+  text-align: left;
+}
+.about-iusm .separator-left::before, .about-iusm .separator-left::after {
+  display: table;
+  content: " ";
+  flex-basis: 0;
+  order: 1;
+}
+.about-iusm .separator-left::after {
+  clear: both;
+}
+.about-iusm .separator-left::after {
+  position: relative;
+  width: 11rem;
+  border-bottom: 0.125rem solid #1779ba;
+  margin-left: 0;
+}
+.about-iusm__title {
+  text-transform: uppercase;
+}
+.about-iusm .author-social {
+  text-align: center;
+}
+.about-iusm .author-social .fa-stack {
+  display: inline-block;
+}
+.about-iusm .author-social .fa-stack.facebook {
+  color: #4c70ba;
+}
+.about-iusm .author-social .fa-stack.facebook:hover, .about-iusm .author-social .fa-stack.facebook:focus {
+  color: #3b5998;
+}
+.about-iusm .author-social .fa-stack.twitter {
+  color: #83c3f3;
+}
+.about-iusm .author-social .fa-stack.twitter:hover, .about-iusm .author-social .fa-stack.twitter:focus {
+  color: #55acee;
+}
+.about-iusm .author-social .fa-stack.linkedin {
+  color: #009ee8;
+}
+.about-iusm .author-social .fa-stack.linkedin:hover, .about-iusm .author-social .fa-stack.linkedin:focus {
+  color: #007bb5;
+}
+.about-iusm__image {
+  border-radius: 50%;
+  padding: 25px;
+}
+.about-iusm__image-div {
+  background-position: center;
+  background-size: cover;
+  border-radius: 50%;
+  height: 250px;
+  margin: auto;
+  width: 250px;
+  background-image: url(https://photos.smugmug.com/IUSM/2018/2018-07-04-IUSM-Independence-Day-Monterey-Trip/i-z6CQ2ZL/0/70292ada/X5/EXPORT-3125-X5.jpg);
+}
+
+.banner {
+  width: 100%;
+  height: 200px;
+}
+
+.hero-section {
+  background: url("https://static.pexels.com/photos/248064/pexels-photo-248064.jpeg") 50% no-repeat;
+  background-size: cover;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero-section .hero-section-text {
+  color: #fefefe;
+  text-shadow: 1px 1px 2px #0a0a0a;
+}
+
+.connect {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  font-weight: 400;
+  padding: 40px;
+}
+.connect__icons-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  margin: 20px auto;
+}
+@media (max-width: 762px) {
+  .connect__icons-container {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+  }
+}
+.connect__icons-card {
+  -webkit-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  color: black;
+  margin: auto 30px;
+  width: 200px;
+}
+.connect__icons-card__description--smugmug {
+  margin-top: 25px;
+}
+.connect__icon {
+  font-size: 120px;
+  height: 120px;
+  margin-bottom: 10px;
+  width: 120px;
+}
+.connect__icon--smugmug {
+  padding-top: 25px;
+  height: 130px;
+}
+
+.marketing-site-three-up {
+  text-align: center;
+  padding: 2rem 0;
+}
+.marketing-site-three-up .row {
+  max-width: 900px;
+}
+.marketing-site-three-up .columns {
+  margin-bottom: 1rem;
+}
+@media screen and (min-width: 40em) {
+  .marketing-site-three-up .columns {
+    margin-bottom: 0;
+  }
+}
+.marketing-site-three-up .fa {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #1779ba;
+}
+
+.marketing-site-three-up-headline {
+  margin-bottom: 2rem;
+  font-size: 24px;
+}
+
+.full-width-testimonial {
+  background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.1)), url("images/iusm-big-group.jpg");
+  background-position: center center;
+}
+
+.full-width-testimonial-icon .quote-path {
+  fill: none;
+  stroke: #ffae00;
+  stroke-width: 2.5192;
+  stroke-miterlimit: 10;
+}
+
+.full-width-testimonial-content,
+.full-width-testimonial-icon {
+  text-align: center;
+}
+
+.full-width-testimonial-section {
+  padding-top: 2rem;
+}
+.full-width-testimonial-section .full-width-testimonial-text {
+  font-weight: 300;
+  color: #ffffff;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-top: -5px;
+  padding-left: 50px;
+  padding-right: 50px;
+  font-size: 1.5em;
+}
+@media print, screen and (min-width: 40em) {
+  .full-width-testimonial-section .full-width-testimonial-text {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+}
+@media print, screen and (min-width: 64em) {
+  .full-width-testimonial-section .full-width-testimonial-text {
+    padding-left: 180px;
+    padding-right: 180px;
+    font-size: 1.8em;
+  }
+}
+@media screen and (min-width: 75em) {
+  .full-width-testimonial-section .full-width-testimonial-text {
+    padding-left: 300px;
+    padding-right: 300px;
+  }
+}
+.full-width-testimonial-section .full-width-testimonial-source {
+  font-size: 1.2em;
+  font-weight: 600;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  padding-bottom: 0;
+  margin-bottom: 0.2em;
+  font-size: 1em;
+}
+.full-width-testimonial-section .full-width-testimonial-source-context {
+  display: block;
+  font-size: 0.9em;
+  font-weight: 500;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-size: 0.8em;
+}
+.full-width-testimonial-section .slick-slider {
+  margin-bottom: 0px;
+}
+
+.full-width-testimonial-text,
+.full-width-testimonial-content,
+.full-width-testimonial-source,
+.full-width-testimonial-icon {
+  padding-bottom: 2rem;
+}
+
+.full-width-testimonial-content {
+  width: 100%;
+}
+
+.headline__logo {
+  height: 150px;
+  width: 195px;
+  margin: 20px 0 50px 0;
+}
+
+.subnav-hero-section {
+  text-align: center;
+  background: white;
+  background-size: cover;
+  position: relative;
+  overflow: visible;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 180px;
+}
+.subnav-hero-section .subnav-hero-headline {
+  color: black;
+  margin-top: 0;
+  padding-bottom: 20px;
+}
+
+.subnav-hero-subnav {
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  justify-content: center;
+  display: inline-flex;
+  float: none;
+  position: absolute;
+  text-align: center;
+  margin: 0 auto;
+  bottom: 0;
+  width: 100%;
+}
+.subnav-hero-subnav li {
+  float: none;
+  display: inline-block;
+}
+.subnav-hero-subnav li a {
+  padding: 0.9rem 1rem;
+  font-size: 0.75rem;
+  color: black;
+  text-transform: uppercase;
+  display: block;
+  font-weight: bold;
+  letter-spacing: 1px;
+  padding-bottom: 20px;
+  transition: all 0.35s ease-in-out;
+  text-decoration: none;
+}
+.subnav-hero-subnav li a.is-active {
+  background: rgba(0, 0, 0, 0.15);
+}
+.subnav-hero-subnav li a:hover {
+  background: rgba(0, 0, 0, 0.15);
+}
+
+.nav-divider {
+  border-bottom: 1px solid black;
+  margin: auto;
+  width: 65%;
+}
+
+.fullscreen-image-slider .orbit-image {
+  width: 100%;
+  height: 100vh;
+}
+.fullscreen-image-slider .orbit-caption {
+  bottom: 50%;
+  transform: translateY(50%);
+  background: none;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+}
+
+.article-row {
+  -webkit-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+.article-row__image {
+  background-image: url(https://photos.smugmug.com/IUSM/2018/2018-03-23-IUSM-Laser-Tag/i-ZrhNjvX/0/09c527bd/X3/EXPORT-7136-X3.jpg);
+  background-position: center;
+  background-size: cover;
+  border-radius: 50%;
+  height: 250px;
+  margin: auto;
+  width: 250px;
+}
+.article-row-content {
+  padding-left: 1.5rem;
+}
+
+.events-container {
+  margin: 50px auto;
+}
+
+.callout__blue-line {
+  width: 23rem;
+}
+
+.article-row-section {
+  max-width: 75rem;
+  margin-right: auto;
+  margin-left: auto;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.article-row-section-inner {
+  -webkit-flex: 0 0 100%;
+  -ms-flex: 0 0 100%;
+  flex: 0 0 100%;
+  max-width: 100%;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+  max-width: 100%;
+}
+
+@media print, screen and (min-width: 40em) {
+  .article-row-section-inner {
+    padding-right: 0.9375rem;
+    padding-left: 0.9375rem;
+  }
+}
+@media print, screen and (min-width: 40em) {
+  .article-row-section-inner {
+    -webkit-flex: 0 0 83.33333%;
+    -ms-flex: 0 0 83.33333%;
+    flex: 0 0 83.33333%;
+    max-width: 83.33333%;
+    padding-right: 0.625rem;
+    padding-left: 0.625rem;
+    max-width: 83.33333%;
+  }
+}
+@media print, screen and (min-width: 40em) and (min-width: 40em) {
+  .article-row-section-inner {
+    padding-right: 0.9375rem;
+    padding-left: 0.9375rem;
+  }
+}
+.article-row-section-header {
+  padding: 1.5rem 0;
+  margin: 0;
+  line-height: 1;
+}
+
+.article-row {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+@media print, screen and (min-width: 40em) {
+  .article-row {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+}
+.article-row-img img {
+  width: 100%;
+}
+
+@media print, screen and (min-width: 40em) {
+  .article-row-img img {
+    max-width: none;
+    width: auto;
+  }
+}
+.article-row-content {
+  color: #0a0a0a;
+}
+
+@media print, screen and (min-width: 40em) {
+  .article-row-content {
+    padding: 0 0 0 1.5rem;
+  }
+}
+.article-row-content-header {
+  font-size: 1.5rem;
+}
+
+.article-row-content-description {
+  font-size: 1.25rem;
+}
+
+.article-row-content-author,
+.article-row-content-time {
+  font-size: 0.875rem;
+  margin-bottom: 0;
+  color: #8a8a8a;
+}
+
+.article-row-reversed .article-row-content {
+  -webkit-order: 2;
+  -ms-flex-order: 2;
+  order: 2;
+  padding: 0 1.5rem 0 0;
+}
+
+.article-row-reversed .article-row-img {
+  -webkit-order: 1;
+  -ms-flex-order: 1;
+  order: 1;
+  padding: 0 0 1.5rem 0;
+}
+
+@media print, screen and (min-width: 40em) {
+  .article-row-reversed .article-row-content {
+    -webkit-order: 1;
+    -ms-flex-order: 1;
+    order: 1;
+  }
+
+  .article-row-reversed .article-row-img {
+    -webkit-order: 2;
+    -ms-flex-order: 2;
+    order: 2;
+  }
+}
+* {
+  font-family: railwaythin, arial, sans-serif;
+}
+
+main {
+  -webkit-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+}
+
+.margin-top {
+  margin-top: 10px;
+}
+
+.top-bottom-margin-50 {
+  margin: 50px auto;
+}
+
+.left-right-margin-25 {
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+.blue-line {
+  position: relative;
+  border-bottom: 0.125rem solid #1779ba;
+  margin-left: 0;
+}
+
+.top-shadow {
+  box-shadow: 0 4px 20px 5px lightgrey;
+  width: 100%;
+}
+
+.bottom-shadow {
+  box-shadow: 0 4px 20px -10px gray;
+}
+
+/*# sourceMappingURL=app.css.map */

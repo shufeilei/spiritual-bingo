@@ -1,0 +1,53 @@
+@import 'foundation-sites/scss/global.scss';
+@import 'foundation-sites/scss/foundation.scss';
+
+@import 'components/_mixins.scss';
+@import 'components/_fonts.scss';
+
+@import 'components/_about.scss';
+@import 'components/_banner.scss';
+@import 'components/_connect.scss';
+@import 'components/_footer.scss';
+@import 'components/_full-width-testimonial.scss';
+@import 'components/_nav.scss';
+@import 'components/_sliding-images.scss';
+@import 'components/_upcoming-events.scss';
+
+* {
+  font-family: railwaythin, arial, sans-serif;
+}
+
+main {
+  @include align-items(center);
+  @include display-flex;
+  @include flex-direction(column);
+}
+
+.margin-top {
+  margin-top: 10px;
+}
+
+.top-bottom-margin-50 {
+  margin: 50px auto;
+}
+
+.left-right-margin-25 {
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+.blue-line {
+  position: relative;
+  border-bottom: $about-the-author-separator-thickness solid $primary-color;
+  // margin: 0.3rem auto 0;
+  margin-left: 0;
+}
+
+.top-shadow {
+  box-shadow: 0 4px 20px 5px lightgrey;
+  width: 100%;
+}
+
+.bottom-shadow {
+  box-shadow: 0 4px 20px -10px gray;
+}

@@ -1,0 +1,31 @@
+@font-face {
+    font-family: 'ralewaythin';
+    src: url(./fonts/raleway-thin-webfont.tff);
+    src: url(./fonts/raleway-thin-webfont.tff) format('tff'),
+         url(./fonts/raleway-thin-webfont.woff2) format('woff2'),
+         url(./fonts/raleway-thin-webfont.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'submarine_beachregular';
+    src: url(./fonts/submarine-beach-demo-webfont.tff);
+    src: url(./fonts/submarine-beach-demo-webfont.tff) format('tff'),
+         url(./fonts/submarine-beach-demo-webfont.woff2) format('woff2'),
+         url(./fonts/submarine-beach-demo-webfont.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.fancy-80 {
+  font-family: 'submarine_beachregular', arial, sans-serif;
+  font-size: 80px;
+  margin-bottom: -30px;
+}
+
+.fancy-55 {
+  font-family: 'submarine_beachregular', arial, sans-serif;
+  font-size: 55px;
+  margin-bottom: -15px;
+}

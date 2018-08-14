@@ -1,0 +1,41 @@
+.connect {
+  @include display-flex;
+  @include align-items(center);
+  @include flex-direction(column);
+  font-weight: 400;
+  padding: 40px;
+
+  &__icons-container {
+    @include display-flex;
+    margin: 20px auto;
+
+    @media (max-width: 762px) {
+      @include flex-direction(column);
+    }
+  }
+
+  &__icons-card {
+    @include align-items(center);
+    @include display-flex;
+    @include flex-direction(column);
+    color: black;
+    margin: auto 30px;
+    width: 200px;
+
+    &__description--smugmug {
+      margin-top: 25px;
+    }
+  }
+
+  &__icon {
+    font-size: 120px;
+    height: 120px;
+    margin-bottom: 10px;
+    width: 120px;
+
+    &--smugmug {
+      padding-top: 25px;
+      height: 130px;
+    }
+  }
+}

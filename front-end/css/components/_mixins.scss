@@ -1,0 +1,32 @@
+@mixin display-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+@mixin align-items($args) {
+  -webkit-align-items: $args;
+  -ms-align-items: $args;
+  align-items: $args;
+}
+
+@mixin flex-direction($args) {
+  -webkit-flex-direction: $args;
+  flex-direction: $args;
+}
+
+@mixin justify-content($args) {
+  -webkit-justify-content: $args;
+  -moz-justify-content: $args;
+  justify-content: $args;
+}
+
+@mixin circle-image($args) {
+  background-position: center;
+  background-size: cover;
+  border-radius: 50%;
+  height: $args;
+  margin: auto;
+  width: $args;
+}
