@@ -13,8 +13,6 @@
 //= require turbolinks
 //= require jquery
 //= require jquery_ujs
-//= require jquery.easing/jquery.easing.min
-//= require magnific-popup/dist/jquery.magnific-popup.min
 //= require dist/bundle.js
 //= require instafeed.min.js
 //= require_tree .
