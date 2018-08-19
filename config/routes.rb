@@ -14,7 +14,9 @@ Rails.application.routes.draw do
   resources :cells, only: :index
 
   resources :teams
-  
+
+  resources :events
+
   mount Commontator::Engine => '/commontator'
 
   get '/board', to: redirect('/boards')

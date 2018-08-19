@@ -10,29 +10,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_05_08_154605) do
+ActiveRecord::Schema.define(version: 2018_08_19_065239) do
 
-  create_table "boards", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "boards", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_boards_on_user_id"
   end
 
-  create_table "cells", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "cells", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
     t.integer "row"
     t.integer "col"
     t.text "response"
     t.datetime "finished_at"
     t.bigint "board_id"
-    t.string "picture_file_name"
+    t.string "picture_file_name", collation: "utf8_general_ci"
     t.string "picture_content_type"
     t.integer "picture_file_size"
     t.datetime "picture_updated_at"
     t.index ["board_id"], name: "index_cells_on_board_id"
   end
 
-  create_table "commontator_comments", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "commontator_comments", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
     t.string "creator_type"
     t.integer "creator_id"
     t.string "editor_type"
@@ -50,7 +50,7 @@ ActiveRecord::Schema.define(version: 2018_05_08_154605) do
     t.index ["thread_id", "created_at"], name: "index_commontator_comments_on_thread_id_and_created_at"
   end
 
-  create_table "commontator_subscriptions", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "commontator_subscriptions", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
     t.string "subscriber_type", null: false
     t.integer "subscriber_id", null: false
     t.integer "thread_id", null: false
@@ -60,7 +60,7 @@ ActiveRecord::Schema.define(version: 2018_05_08_154605) do
     t.index ["thread_id"], name: "index_commontator_subscriptions_on_thread_id"
   end
 
-  create_table "commontator_threads", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "commontator_threads", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
     t.string "commontable_type"
     t.integer "commontable_id"
     t.datetime "closed_at"
@@ -71,11 +71,20 @@ ActiveRecord::Schema.define(version: 2018_05_08_154605) do
     t.index ["commontable_id", "commontable_type"], name: "index_commontator_threads_on_c_id_and_c_type", unique: true
   end
 
-  create_table "teams", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "events", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "title", limit: 512
+    t.string "description", limit: 1024
+    t.string "location", limit: 1024
+    t.datetime "start_at"
+    t.datetime "end_at"
+    t.string "backgroundImagePath", limit: 1024
+  end
+
+  create_table "teams", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
     t.string "name"
   end
 
-  create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"
