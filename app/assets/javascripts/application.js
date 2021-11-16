@@ -13,7 +13,8 @@
 //= require turbolinks
 //= require jquery
 //= require jquery_ujs
-//= require bootstrap/dist/js/bootstrap.bundle.min
+//= require popper
+//= require bootstrap
 //= require jquery.easing/jquery.easing.min
 //= require magnific-popup/dist/jquery.magnific-popup.min
 //= require startbootstrap-freelancer/js/jqBootstrapValidation.min

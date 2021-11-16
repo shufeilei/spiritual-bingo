@@ -37,8 +37,8 @@ gem 'jquery-ui-rails'
 gem 'font-awesome-rails'
 gem 'redcarpet'
 
-gem 'bootstrap'
-gem 'bootstrap-form'
+gem 'bootstrap', "~> 5.1"
+gem "bootstrap_form", "~> 4.0"
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
