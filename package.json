@@ -1,9 +1,8 @@
 {
-  "name": "iusm",
+  "name": "bingo",
   "private": true,
   "dependencies": {
     "lightbox2": "^2.10.0",
-    "popper.js": "^1.14.3",
-    "startbootstrap-freelancer": "^4.0.0"
+    "popper.js": "^1.14.3"
   }
 }
