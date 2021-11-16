@@ -44,7 +44,7 @@ environment ENV.fetch("RAILS_ENV") { "development" }
 # The default is "false".
 #
 # daemonize
-daemonize true
+# daemonize true
 
 # Specifies the number of `workers` to boot in clustered mode.
 # Workers are forked webserver processes. If using threads and workers together
