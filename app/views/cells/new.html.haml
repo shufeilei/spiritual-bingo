@@ -7,7 +7,7 @@
       = f.hidden_field :row, value: params[:row]
       = f.hidden_field :col, value: params[:col]
       .pull-right
-        =link_to '#', data: { toggle: 'modal', target: '#markdownModal'} do
+        =link_to '#', data: { bs_toggle: 'modal', bs_target: '#markdownModal'} do
           .label.label-primary Markdown Support
       .field
         = f.label 'Please share your learning from this activity:'

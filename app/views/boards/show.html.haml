@@ -27,14 +27,15 @@
             - the_cell = @cells.where(col: index_col, row: index_row).first
             - finished = the_cell ? 'finished' : ''
             %td.bingo-cell.text-center{ class: finished }
-              .instruction{ class: cell[:level], data: { toggle: 'popover', placement: 'top', html: 'true', content: cell[:description] } }
+              .instruction{ class: cell[:level], 
+                data: { bs_toggle: 'popover', bs_placement: 'top', bs_content: cell[:description] } }
                 = cell[:name]
               .sharing
                 - if finished == 'finished'
                   = link_to board_cell_path(@board, the_cell), class: 'btn btn-primary btn-sm' do
                     read sharing #{fa_icon 'comment'}
                     %br
-                    %small [ #{pluralize(the_cell.thread.comments.where(deleted_at:nil).count, 'comment')} ]
+                    %small [ #{pluralize(the_cell.commontator_thread.comments.count, 'comment')} ]
                 - else
                   = link_to new_board_cell_path(board_id: @board.id, row: index_row, col: index_col), class: 'btn btn-warning btn-sm' do
                     submit
@@ -47,8 +48,7 @@
     = render partial: 'sharing'
 
 :javascript
-  $('.instruction[data-toggle="popover"]').popover();
-
-  $('.instruction[data-toggle="popover"]').on('click', function (e) {
-    $('.instruction[data-toggle="popover"]').not(this).popover('hide');
-  });
+  var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+  var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+    return new bootstrap.Popover(popoverTriggerEl, {html: true})
+  })
