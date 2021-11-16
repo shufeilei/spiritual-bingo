@@ -19,17 +19,11 @@
     - if controller_name == 'pages'
       = yield
     - else
-      %header.masthead
-        .container
-          - if flash[:error] || flash[:notice] || flash[:success]
-            .card
-              .card-body.bg-light
-                %p.text-danger= flash[:error]
-                %p.text-warning= flash[:notice]
-                %p.text-success= flash[:success]
-            %br
-          = yield
+      .container
+        #flash
+          - if flash.any?
+            = render partial: "layouts/flash"
+        = yield
     = render partial: 'layouts/footer'
 
-    = javascript_include_tag 'startbootstrap-freelancer/js/freelancer.min'
     = javascript_include_tag 'lightbox2/dist/js/lightbox.min'

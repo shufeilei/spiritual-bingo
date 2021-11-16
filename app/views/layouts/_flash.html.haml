@@ -1,0 +1,4 @@
+- flash.each do |key, value|
+  %div.alert-dismissible.fade.show{class: flash_class(key)}
+    = value
+    %button.btn-close{data: {bs_dismiss: "alert"}, "aria-label" => "close" }
