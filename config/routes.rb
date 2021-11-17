@@ -19,9 +19,6 @@ Rails.application.routes.draw do
 
   mount Commontator::Engine => '/commontator'
 
-  get '/board', to: redirect('/boards')
-  get '/summerchallenge', to: redirect('/boards')
-
-  root "pages#show", page: "home"
+  root to: "boards#index"
 
 end
