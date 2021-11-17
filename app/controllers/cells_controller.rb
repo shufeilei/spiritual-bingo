@@ -23,7 +23,7 @@ class CellsController < ApplicationController
   end
 
   def show
-    commontator_thread_show(@cell)
+    # commontator_thread_show(@cell)
   end
 
   def edit

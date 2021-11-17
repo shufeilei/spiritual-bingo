@@ -2,9 +2,9 @@
   %ul.list-group.list-group-flush#recent-activities
     %li.list-group-item.text-info
       %strong RECENT SHARING
-    - Cell.includes(:thread, :board).order(finished_at: :desc).limit(7).each do |cell|
+    - Cell.includes(:commontator_thread, :board).order(finished_at: :desc).limit(7).each do |cell|
       %li.list-group-item
         = link_to cell.board.user.username, board_path(cell.board)
         \-
         = link_to cell.response.truncate_words(15), board_cell_path(cell.board, cell)
-        .text-warning.text-right Comments (#{cell.thread.comments.where(deleted_at:nil).count})
+        .text-warning.text-right Comments (#{cell.commontator_thread.comments.count})
