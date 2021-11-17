@@ -3,17 +3,15 @@
   %head
     %meta{content: "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}
     %meta{name: "viewport", content: "width=device-width, initial-scale=1, shrink-to-fit=no"}
-    %meta{name: "description", content: "Official website for International Undergraduate Student Ministry at UC Berkeley"}
+    %meta{name: "description", content: "IUSM Winter Challenge"}
     %meta{name: "author", content: "Shufei Lei"}
 
-    %title International Undergraduate Student Ministry
+    %title IUSM Winter Challenge
     = csrf_meta_tags
     = csp_meta_tag
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
     = favicon_link_tag
-    %link{rel: :stylesheet, type: 'text/css', href: 'https://fonts.googleapis.com/css?family=Montserrat:400,700'}
-    %link{rel: :stylesheet, type: 'text/css', href: 'https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic'}
   %body#page-top
     .mb-4= render partial: 'layouts/header'
     - if controller_name == 'pages'
