@@ -10,7 +10,7 @@ class Board < ApplicationRecord
       { name: 'Pray through 31 Days of Praise', level: :hard, description: 'Learn how to connect with God through reading well-written prayers of praise.' },
       { name: 'Memorize the Beatitudes', level: :medium, description: 'The Beatitudes is in Matthew 5:3-11' },
       { name: 'Read one apologetics book', level: :hard, description: 'More Than a Carpenter, Letters from a Skeptic, or another apologetics book of your choice.' },
-      { name: 'Share your testimony', level: :easy, description: 'Share your testimony of how you came to believe in Jesus with at least one person this summer.' }
+      { name: 'Share your testimony', level: :easy, description: 'Share your testimony of how you came to believe in Jesus with at least one person this winter.' }
     ],
     [
       { name: 'Read one of the four Gospels', level: :hard, description: 'They are Matthew, Mark, Luke and John. Feel free to read them all.' },
@@ -30,7 +30,7 @@ class Board < ApplicationRecord
       { name: 'Read one "Case For" book', level: :hard, description: 'Case for Christ, Case for Faith, Case for Grace, Case for Creator' },
       { name: 'Read three Minor Prophets', level: :medium, description: 'Hosea, Joel, Amos, Obadiah, Jonah, Micah, Nahum, Habakkuk, Zephaniah, Haggai, Zechariah, Malachi' },
       { name: 'Watch one Bible Project video series', level: :easy, description: 'Join the Bible Project video has varying length of video series. You can find them <a href="https://thebibleproject.com/all-videos/" target="_blank">here</a>.' },
-      { name: 'Do DT for two weeks', level: :medium, description: 'Encouragement to practice regular spiritual discipine that can easily slip up during the summer.' },
+      { name: 'Do DT for two weeks', level: :medium, description: 'Encouragement to practice regular spiritual discipine that can easily slip up during the winter.' },
       { name: 'Memorize Psalm 1 and Psalm 23', level: :hard, description: 'These are two great psalms to memorize.' },
     ],
     [
