@@ -5,6 +5,8 @@
       = image_tag 'favicon.ico', width: '30px'
       IUSM
     %ul.navbar-nav.d-flex
+      %li.nav-item 
+        =link_to 'Instructions', '#', data: { bs_toggle: 'modal', bs_target: '#boardInstrModal' }, class: 'nav-link'
       - if user_signed_in?
         %li.nav-item.dropdown
           = link_to 'Game boards', '#', class: 'nav-link dropdown-toggle', id: 'dropdownScoreboardLink', data: { bs_toggle: 'dropdown' },

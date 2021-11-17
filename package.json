@@ -2,7 +2,6 @@
   "name": "bingo",
   "private": true,
   "dependencies": {
-    "lightbox2": "^2.10.0",
-    "popper.js": "^1.14.3"
+    "lightbox2": "^2.10.0"
   }
 }
