@@ -13,8 +13,8 @@
         = f.label 'Please share your learning from this activity:'
         = f.text_area :response, rows: 10, class: 'form-control'
       .field
-        = f.label 'Want to upload a picture?'
-        = f.file_field :picture
+        = f.label 'Want to upload a picture or video?'
+        = f.file_field :picture, direct_upload: true
       .field
         = f.submit 'Submit', class: 'btn btn-success'
         .pull-right

@@ -1,31 +1,32 @@
 = render partial: 'header',
          locals: { board: current_user.board, row: @row, col: @col }
-.row
-  .col-12
-    - if @cells.empty?
+- if @cells.empty?
+  .row
+    .col-12
       .lead
         No one has done this yet. You can be the first one!
         =fa_icon 'smile-o'
-    - @cells.each do |cell|
-      .mb-2
-        %strong
-          = link_to cell.board.user.username, board_path(cell.board)
-        .pull-right.small.text-muted
-          - if cell.finished_at
-            = cell.finished_at.strftime("%m/%d/%Y %I:%M%P")
-          - if cell.board.user == current_user
-            |
-            = link_to 'Edit', edit_board_cell_path(cell.board, cell)
-      .clearfix
-      .card{style:'min-height: 100px'}
-        .card-body
-          - if cell.picture.present?
-            = link_to cell.picture.url(:original),
-              data: { lightbox: cell.picture_file_name,
-                      title: cell.picture_file_name } do
-              = image_tag cell.picture.url(:medium),
-                class: 'img-fluid img-thumbnail', align: 'right'
-          = markdown(cell.response)
-      %p
-        .pull-right.small
-        = commontator_thread(cell)
+- @cells.each do |cell|
+  .cell.mb-4{id: dom_id(cell)}
+    .row
+      .col-10
+        .mb-1
+          %strong
+            = link_to cell.board.user.username, board_path(cell.board)
+          .pull-right.small.text-muted
+            - if cell.finished_at
+              = cell.finished_at.strftime("%m/%d/%Y %I:%M%P")
+            - if cell.board.user == current_user
+              |
+              = link_to 'Edit', edit_board_cell_path(cell.board, cell)
+        .card{style:'min-height: 100px'}
+          .card-body
+            = markdown(cell.response)
+        .px-4= commontator_thread(cell)
+      .col-2
+        - if cell.picture.attached?
+          .my-2
+            = link_to rails_blob_path(cell.picture, disposition: "attachment"),
+              data: { lightbox: cell.picture.filename, title: cell.picture.filename } do
+              = image_tag cell.picture.representation(resize_to_limit: [200, 200]), class: 'img-fluid img-thumbnail'
+    %hr

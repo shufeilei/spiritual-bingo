@@ -49,7 +49,9 @@ gem "bootstrap_form", "~> 4.0"
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
 
-gem 'paperclip'
+gem 'image_processing'
+gem 'mini_magick'
+
 gem 'commontator'
 
 group :development, :test do

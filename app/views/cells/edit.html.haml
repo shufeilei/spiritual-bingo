@@ -6,20 +6,25 @@
       = fa_icon('exclamation-triangle')
       = message
 = form_for(@cell, url: board_cell_path(@cell.board, @cell), html: { method: :put, multipart: true }) do |f|
-  .pull-right
-    =link_to '#', data: { bs_toggle: 'modal', bs_target: '#markdownModal'} do
-      .label.label-primary Markdown Support
-  .field
-    = f.label 'Edit your sharing for this activity:'
-    = f.text_area :response, rows: 10, value: @cell.response, class: 'form-control'
-  .field
-    - if @cell.picture.present?
-      .img-fluid= image_tag @cell.picture.url(:thumb)
-    = f.label 'Want to upload a picture?'
-    = f.file_field :picture
-  .field
-    = f.submit 'Update', class: 'btn btn-success'
-    = link_to "Cancel", board_cell_path(@cell.board, @cell)
-    .pull-right
-      = link_to "Delete", board_cell_path(@cell.board, @cell), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger'
+  .row
+    .col-9
+      .pull-right
+        =link_to '#', data: { bs_toggle: 'modal', bs_target: '#markdownModal'} do
+          .label.label-primary Markdown Support
+      = f.label 'Edit your sharing for this activity:'
+      = f.text_area :response, rows: 10, value: @cell.response, class: 'form-control'
+      .field
+        = f.submit 'Update', class: 'btn btn-success'
+        = link_to "Cancel", board_cell_path(@cell.board, @cell), class: 'btn btn-outline-secondary'
+        .pull-right
+          = link_to "Delete", board_cell_path(@cell.board, @cell), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger'
+    .col-3
+      = f.label 'Upload a picture or video?'
+      - if @cell.picture.attached?
+        = link_to rails_blob_path(@cell.picture, disposition: "attachment"),
+          data: { lightbox: @cell.picture.filename, title: @cell.picture.filename } do
+          = image_tag @cell.picture.representation(resize_to_limit: [200, 200]), class: 'img-fluid img-thumbnail'
+        %br
+        = link_to 'Delete picture', { action: :delete_picture }, method: :put, class: "btn btn-danger btn-sm"
+      .mt-4= f.file_field :picture, direct_upload: true
 = render partial: 'markdown_modal'
