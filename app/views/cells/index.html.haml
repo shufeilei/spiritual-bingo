@@ -1,7 +1,7 @@
 = render partial: 'header',
          locals: { board: current_user.board, row: @row, col: @col }
 .row
-  .col-md-12
+  .col-12
     - if @cells.empty?
       .lead
         No one has done this yet. You can be the first one!

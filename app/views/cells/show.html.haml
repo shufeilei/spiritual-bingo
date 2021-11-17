@@ -1,10 +1,10 @@
 = render partial: 'header',
          locals: { board: @cell.board, row: @cell.row, col: @cell.col }
 .row
-  .col-md-7
+  .col-7
     %h4 #{@cell.board.user.username}'s sharing
     .small= @cell.finished_at.strftime("%m/%d/%Y %I:%M%P")
-  .col-md-5
+  .col-5
     %ul.nav.justify-content-end
       %li.nav-item
         = link_to cells_path(row: @cell.row, col: @cell.col), class: 'nav-link' do
@@ -15,7 +15,7 @@
           %li.nav-item
             = link_to "Delete", board_cell_path(@cell.board, @cell), method: :delete, data: { confirm: 'Are you sure?' }, class: 'nav-link'
 .row
-  .col-md-12
+  .col-12
     .card{style:'min-height: 200px'}
       .card-body
         - if @cell.picture.present?
@@ -30,5 +30,5 @@
               .mx-3= link_to 'Delete picture', { action: :delete_picture }, method: :put, class: "btn btn-danger btn-sm"
         = markdown(@cell.response)
 .row.my-4
-  .col-md-12
+  .col-12
     = commontator_thread(@cell)

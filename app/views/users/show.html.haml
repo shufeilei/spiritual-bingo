@@ -1,5 +1,5 @@
 .row
-  .col-md-3
+  .col-3
     %h2 Profile
     %p
       %strong Username:
@@ -19,7 +19,7 @@
       %p
         = link_to 'Edit', edit_user_path(@user), class: 'btn btn-warning btn-sm'
         = link_to 'Change password', edit_user_registration_path, class: 'btn btn-warning btn-sm'
-  .col-md-9
+  .col-9
     %h2 #{@user.username}'s sharing
     - @sharings.each do |sharing|
       %p

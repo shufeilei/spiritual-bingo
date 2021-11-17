@@ -15,7 +15,7 @@
     = f.select :team_id, options_for_select(Team.pluck(:name, :id).push(['Add new...', 'new']), @user.team.id), { include_blank: 'Select a team...' }, class: 'form-control'
   .field
     .row.justify-content-end#new_team_form{style: 'display: none;'}
-      .col-md-11
+      .col-11
         = f.fields_for :team do |t|
           = t.label :name
           = t.text_field :name, value: nil, class: 'form-control'

@@ -1,7 +1,7 @@
 = render partial: 'header',
          locals: { board: @cell.board, row: @cell.row, col: @cell.col }
 .row
-  .col-md-12
+  .col-12
     = form_for @cell, url: { action: 'create' }, html: { multipart: true } do |f|
       = f.hidden_field :board_id, value: params[:board_id]
       = f.hidden_field :row, value: params[:row]
