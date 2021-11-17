@@ -1,21 +1,16 @@
 .row
   .col-9
     .row
-      .col-8
+      .col-12
         %h2.text-primary
           #{@user_possessive} board
           = link_to fa_icon('user'), user_path(@board.user)
-      .col-4.text-right
-        - unless @board == current_user.board
-          = link_to 'my board', board_path(current_user.board)
-          |
-        = link_to 'scoreboard', boards_path
-    .row
-      .col-6
+    .row.justify-content-between
+      .col-3
         %h4
           Score:
           = @board.score
-      .col-6.text-right
+      .col-4
         - if @board.user.team
           %h4
             #{@board.user.team.name}:

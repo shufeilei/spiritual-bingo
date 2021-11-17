@@ -6,14 +6,18 @@
       IUSM
     %ul.navbar-nav.d-flex
       %li.nav-item.dropdown
+        = link_to 'Game boards', '#', class: 'nav-link dropdown-toggle', id: 'dropdownScoreboardLink', data: { bs_toggle: 'dropdown' },
+        'aria-haspopup' => 'true', 'aria-expanded' => 'false'
+        %ul.dropdown-menu{'aria-labelledby' => 'dropdownMenuButton'}
+          %li= link_to 'My board', board_path(current_user.board), class: 'dropdown-item'
+          %li= link_to 'Scoreboard', boards_path, class: 'dropdown-item'
+
+      %li.nav-item.dropdown
         = link_to '#', class: 'nav-link dropdown-toggle', id: 'dropdownMenuLink', data: { bs_toggle: 'dropdown' },
           'aria-haspopup' => 'true', 'aria-expanded' => 'false' do
           = user_signed_in? ? current_user.username : 'Member'
         %ul.dropdown-menu{'aria-labelledby' => 'dropdownMenuButton'}
           - if user_signed_in?
-            %li=link_to 'Summer Challenge', boards_path, class: 'dropdown-item'
-            - if current_user.board
-              %li=link_to 'My game board', board_path(current_user.board), class: 'dropdown-item'
             %li=link_to 'My profile', user_path(current_user), class: 'dropdown-item'
             %li=link_to 'Sign out', destroy_user_session_path, class: 'dropdown-item'
           - else

@@ -15,7 +15,7 @@
     %link{rel: :stylesheet, type: 'text/css', href: 'https://fonts.googleapis.com/css?family=Montserrat:400,700'}
     %link{rel: :stylesheet, type: 'text/css', href: 'https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic'}
   %body#page-top
-    = render partial: 'layouts/header'
+    .mb-4= render partial: 'layouts/header'
     - if controller_name == 'pages'
       = yield
     - else
