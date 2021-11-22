@@ -36,5 +36,4 @@ class BoardsController < ApplicationController
   def board_params
     params.require(:board).permit(:user_id)
   end
-
 end
