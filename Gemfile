@@ -40,17 +40,17 @@ gem 'redcarpet'
 gem 'bootstrap', "~> 5.1"
 gem "bootstrap_form", "~> 4.0"
 
+gem 'lightbox2-rails'
+
 # Use ActiveStorage variant
-# gem 'mini_magick', '~> 4.8'
+gem 'mini_magick'#, '~> 4.8'
+gem 'image_processing'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
-
-gem 'image_processing'
-gem 'mini_magick'
 
 gem 'commontator'
 
