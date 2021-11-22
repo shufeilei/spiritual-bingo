@@ -11,7 +11,8 @@
           = link_to 'Game boards', '#', class: 'nav-link dropdown-toggle', id: 'dropdownScoreboardLink', data: { bs_toggle: 'dropdown' },
           'aria-haspopup' => 'true', 'aria-expanded' => 'false'
           %ul.dropdown-menu{'aria-labelledby' => 'dropdownMenuButton'}
-            %li= link_to 'My board', board_path(current_user.board), class: 'dropdown-item'
+            - if current_user.board
+              %li= link_to 'My board', board_path(current_user.board), class: 'dropdown-item'
             %li= link_to 'Scoreboard', boards_path, class: 'dropdown-item'
 
       %li.nav-item.dropdown
