@@ -18,3 +18,7 @@
 //= require lightbox
 //= require activestorage
 //= require_tree .
+
+$(document).on('turbolinks:load', function(event) {
+  lightbox.init();
+});
