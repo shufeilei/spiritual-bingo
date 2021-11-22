@@ -8,7 +8,7 @@ class RemovePaperclipColumnsFromCells < ActiveRecord::Migration[6.1]
 
   def down
     add_column :cells, :picture_content_type, :string
-    add_column :cells, :picture_file_name, :sting
+    add_column :cells, :picture_file_name, :string
     add_column :cells, :picture_file_size, :integer
     add_column :cells, :picture_updated_at, :datetime
   end
