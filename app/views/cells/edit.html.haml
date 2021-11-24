@@ -26,7 +26,7 @@
             data: { lightbox: @cell.picture.filename, title: @cell.picture.filename } do
             = image_tag @cell.picture.representation(resize_to_limit: [200, 200]), class: 'img-fluid img-thumbnail'
         - else
-          = video_tag url_for(@cell.picture), controls: true
+          = video_tag url_for(@cell.picture), controls: true, size: "200x200"
         %br
         = link_to 'Delete picture', { action: :delete_picture }, method: :put, class: "btn btn-danger btn-sm"
       .mt-4= f.file_field :picture, direct_upload: true

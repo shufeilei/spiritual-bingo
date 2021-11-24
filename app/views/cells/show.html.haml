@@ -20,17 +20,13 @@
       .card-body
         = markdown(@cell.response)
   .col-2
-  - if @cell.picture.attached?
-    .my-2
+    - if @cell.picture.attached?
       - if @cell.picture.content_type.include?("image")
         = link_to rails_blob_path(@cell.picture, disposition: "attachment"),
           data: { lightbox: @cell.picture.filename, title: @cell.picture.filename } do
           = image_tag @cell.picture.representation(resize_to_limit: [200, 200]), class: 'img-fluid img-thumbnail'
       - else
-        = video_tag url_for(@cell.picture), controls: true
-          = link_to rails_blob_path(@cell.picture, disposition: "attachment"),
-            data: { lightbox: @cell.picture.filename, title: @cell.picture.filename } do
-            = image_tag @cell.picture.representation(resize_to_limit: [200, 200]), class: 'img-fluid img-thumbnail'
+        = video_tag url_for(@cell.picture), controls: true, size: "200x200"
     .mb-2.text-muted= @cell.picture.filename
 .row.my-4
   .col-12

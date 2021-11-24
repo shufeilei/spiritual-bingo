@@ -33,11 +33,11 @@
                     %small [ #{pluralize(the_cell.commontator_thread.comments.count, 'comment')} ]
                 - else
                   = link_to new_board_cell_path(board_id: @board.id, row: index_row, col: index_col), class: 'btn btn-warning btn-sm' do
-                    submit
+                    complete
                     =fa_icon 'upload'
               .all-sharing.small.mt-2
                 = link_to cells_path(row: index_row, col: index_col) do
-                  all sharing [#{Cell.where(col: index_col, row: index_row).count}]
+                  completions [#{Cell.where(col: index_col, row: index_row).count}]
   .col-3
     / = render partial: 'bonus'
     = render partial: 'sharing'
